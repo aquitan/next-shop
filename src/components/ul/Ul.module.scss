@@ -1,0 +1,20 @@
+.ul {
+	list-style-type: none;
+	padding-left: 20px;
+
+	li {
+		position: relative;
+		line-height: 24px;
+		color: var(--dark-grey);
+
+		&:before {
+			content: '*';
+			color: var(--blue);
+			height: 3px;
+			width: 3px;
+			position: absolute;
+			left: -15px;
+			top: 3px;
+		}
+	}
+}

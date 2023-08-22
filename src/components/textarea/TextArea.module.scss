@@ -1,0 +1,21 @@
+.label {
+	max-width: 520px;
+	display: block;
+	width: 100%;
+	margin-bottom: 36px;
+}
+
+.textarea {
+	border: none;
+	border-bottom: 1px solid var(--grey);
+	background: var(--white);
+	color: var(--grey);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	padding: 15px 0;
+	padding-top: 0;
+	width: 100%;
+	font-family: inherit;
+}

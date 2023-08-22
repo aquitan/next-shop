@@ -1,0 +1,11 @@
+.controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .controls {
+        display: none;
+    }
+}

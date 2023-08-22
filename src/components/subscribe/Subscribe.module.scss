@@ -1,0 +1,26 @@
+.input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--grey);
+    padding: 10px;
+    margin-right: 10px;
+    &::placeholder {
+        color: var(--grey)
+    }
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--grey);
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    color: var(--grey);
+    cursor: pointer;
+    &:hover {
+        background-color: var(--blue);
+        border-color: var(--blue);
+        color: #fff;
+        transition: all .2s ease-in-out;
+    }
+}

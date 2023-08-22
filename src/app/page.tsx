@@ -1,95 +1,72 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { SliderCentered } from "@/components"
+import Button from "@/components/button/Button"
+import CatalogItem from "@/components/catalogItem/CatalogItem"
+import CategorieItem from "@/components/categorieItem/CategorieItems"
+import { HTag } from "@/components/hTag/HTag"
+import HomeCategories from "@/components/homeCategories/HomeCategories"
+import HomeProducts from "@/components/homeProducts/HomeProducts"
+import MainBanner from "@/components/mainBanner/MainBanner"
+import Section from "@/components/section/Section"
+
+
+const categories = [
+  { img: '/germetic.png', title: 'Гидроизоляция', link: '/catalog', id: 1 },
+  { img: '/maslo.png', title: 'Автохимия', link: '/catalog', id: 2 },
+  { img: '/maslo.png', title: 'Масла', link: '/catalog', id: 3 },
+]
+
+const catalogItems = [
+  { img: '/germetic.png', title: 'Гидроизоляция летняя', description: 'Летняя гидроизоляция для фургонов Cargosil', price: 500, oldPrice: 800, alt: 'Гидроизоляция летняя', currency: '₽', id: 1 },
+  { img: '/germetic.png', title: 'Гидроизоляция летняя', description: 'Летняя гидроизоляция для фургонов Cargosil', price: 500, oldPrice: null, alt: 'Гидроизоляция летняя', currency: '₽', id: 2 },
+  { img: '/germetic.png', title: 'Гидроизоляция летняя', description: 'Летняя гидроизоляция для фургонов Cargosil', price: 500, oldPrice: null, alt: 'Гидроизоляция летняя', currency: '₽', id: 3 },
+  { img: '/germetic.png', title: 'Гидроизоляция летняя', description: 'Летняя гидроизоляция для фургонов Cargosil', price: 500, oldPrice: null, alt: 'Гидроизоляция летняя', currency: '₽', id: 4 },
+  { img: '/germetic.png', title: 'Гидроизоляция летняя', description: 'Летняя гидроизоляция для фургонов Cargosil', price: 500, oldPrice: null, alt: 'Гидроизоляция летняя', currency: '₽', id: 5 },
+  { img: '/germetic.png', title: 'Гидроизоляция летняя', description: 'Летняя гидроизоляция для фургонов Cargosil', price: 500, oldPrice: null, alt: 'Гидроизоляция летняя', currency: '₽', id: 6 },
+  { img: '/germetic.png', title: 'Гидроизоляция летняя', description: 'Летняя гидроизоляция для фургонов Cargosil', price: 500, oldPrice: null, alt: 'Гидроизоляция летняя', currency: '₽', id: 7 },
+  { img: '/germetic.png', title: 'Гидроизоляция летняя', description: 'Летняя гидроизоляция для фургонов Cargosil', price: 500, oldPrice: null, alt: 'Гидроизоляция летняя', currency: '₽', id: 8 },
+]
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Section>
+        <MainBanner />
+      </Section>
+      <Section>
+        <HomeCategories>
+          {
+            categories.map((item: any) => (
+              <CategorieItem link={item.link} key={item.title} alt={item.title} src={item.img} title={item.title} />
+            ))
+          }
+        </HomeCategories>
+      </Section>
+      <Section>
+        <HomeProducts title="наша продукция">
+          {
+            catalogItems.map((item: any) => (
+              <CatalogItem key={item.id} alt={item.title} src={item.img} title={item.title} price={item.price} oldPrice={item.oldPrice} description={item.description} currency={item.currency} />
+            ))
+          }
+        </HomeProducts>
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <Button color='ghost'>Еще</Button>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </Section>
+      <Section bg={'bg'} wide={'wide'}>
+        <div style={{ display: 'flex', gap: 50 }}>
+          <div style={{ width: 600, flexShrink: 0 }}>
+            <div style={{ fontSize: 32, lineHeight: '40px', margin: '100px 0 20px 0' }}>
+              CARGOSIL — надежный и простой в применении герметик на основе синтетического или акрил-каучука.
+            </div>
+            <div style={{ fontSize: 16, margin: '10px 0 30px 0', color: 'var(--dark-grey)' }}>
+              Идеально подходит для ремонта и гидроизоляции всех видов грузовых полуприцепов, фургонов и тентов, а также пассажирского транспорта. Не требует смешения компонентов и обеспечивает великолепную гидрозащиту уже через 24 часа после нанесения.
+            </div>
+            <Button color='cart' link="/catalog">Каталог</Button>
+          </div>
+          <SliderCentered />
+        </div>
+      </Section>
+    </>
   )
 }

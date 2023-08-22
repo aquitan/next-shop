@@ -1,0 +1,59 @@
+.shares {
+	position: absolute;
+	background-color: rgba(0, 0, 0, .5);
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	visibility: none;
+	opacity: 0;
+	transition: all .2s ease-in-out;
+
+	&__inner {
+		position: absolute;
+		top: 45%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		left: 0px;
+		right: 0px;
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		align-items: center;
+		margin: 20px 0;
+
+		span {
+			color: #fff;
+			font-size: 12px;
+		}
+
+		&__item {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			cursor: pointer;
+
+			svg {
+				transition: all .2s ease-in-out;
+			}
+
+			&:hover {
+				svg {
+					fill: var(--orange);
+					transition: all .2s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.hover {
+	visibility: visible;
+	opacity: 1;
+	transition: all .2s ease-in-out;
+}

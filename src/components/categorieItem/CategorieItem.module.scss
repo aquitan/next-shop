@@ -1,0 +1,21 @@
+.wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid var(--grey);
+	border-radius: var(--radius-5);
+	transition: all .2s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+		transition: all .2s ease-in-out;
+		border-color: transparent;
+	}
+}
+
+.title {
+	font-weight: bold;
+	color: var(--dark);
+	text-decoration: none;
+	padding: 10px 0;
+}

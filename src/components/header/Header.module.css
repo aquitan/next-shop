@@ -1,0 +1,17 @@
+.header {
+    border-bottom: 1px solid var(--light-grey);
+    padding: 1rem 0;
+    position: relative;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}

@@ -1,0 +1,55 @@
+.menu {
+	display: none;
+	grid-template-columns: 1fr;
+	gap: 5px;
+	justify-items: flex-end;
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	top: 20px;
+	right: 15px;
+	margin: 0;
+	z-index: 999;
+
+	span {
+		display: inline-block;
+		width: 25px;
+		height: 3px;
+		background-color: var(--blue);
+		transition: all .2s ease-in-out;
+	}
+
+	span:first-child {
+		display: inline-block;
+		transition: all .2s ease-in-out;
+	}
+
+	span:last-child {
+		display: inline-block;
+		transition: all .2s ease-in-out;
+	}
+
+
+}
+
+@media (max-width: 600px) {
+	.menu {
+		display: grid;
+		transition: all .2s ease-in-out;
+	}
+}
+
+.open.menu {
+	transform: rotate(360deg);
+	transition: all .2s ease-in-out;
+
+	span:first-child {
+		width: 15px;
+		transform: rotate(30deg) translate(4px, 3px);
+	}
+
+	span:last-child {
+		width: 15px;
+		transform: rotate(-30deg) translate(4px, -3px);
+	}
+}

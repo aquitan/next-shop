@@ -1,0 +1,15 @@
+.size {
+	border-radius: 5px;
+	background-color: #F9F1E7;
+	color: var(--dark);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	width: fit-content
+}
+
+.picked {
+	background-color: var(--orange);
+	color: #fff;
+}

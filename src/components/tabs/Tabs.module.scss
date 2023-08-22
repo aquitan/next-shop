@@ -1,0 +1,30 @@
+.tabs {
+	margin-bottom: 50px;
+}
+
+.nav {
+	list-style-type: none;
+	display: flex;
+	gap: 40px;
+	font-size: 24px;
+	justify-content: center;
+	margin-bottom: 37px;
+
+
+	li {
+		color: var(--grey);
+		border-bottom: 2px solid transparent;
+		cursor: pointer;
+		transition: all .2s ease-in-out;
+
+		&:hover {
+			border-color: var(--blue);
+			transition: all .2s ease-in-out;
+		}
+	}
+
+	.active {
+		color: var(--dark);
+		border-color: var(--blue);
+	}
+}

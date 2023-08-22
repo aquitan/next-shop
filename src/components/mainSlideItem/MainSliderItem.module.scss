@@ -1,0 +1,31 @@
+.slide {
+	height: 500px;
+	position: relative;
+}
+
+.info {
+	z-index: 99;
+	background-color: var(--orange);
+	position: absolute;
+	padding: 20px;
+	background-color: #FFF3E3;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 600px;
+	width: 100%;
+	bottom: 0;
+}
+
+.title {
+	color: #B88E2F;
+	font-size: 52px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 65px;
+}
+
+.container {
+	max-width: 1240px;
+	margin: 0 auto;
+}

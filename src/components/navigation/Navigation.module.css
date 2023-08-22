@@ -1,0 +1,21 @@
+.link {
+    padding: 0 .5rem;
+    color: var(--dark);
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.link:hover {
+    color: var(--blue);
+    transition: all .2s ease-in-out;
+}
+
+.active {
+    color: var(--blue);
+}
+
+@media(max-width: 600px) {
+    .nav {
+        display: none;
+    }
+}

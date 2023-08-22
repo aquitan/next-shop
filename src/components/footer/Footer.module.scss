@@ -1,0 +1,31 @@
+.footer {
+	flex: 0 0 auto;
+	background-color: #2d2d2d;
+	padding: 3rem 0;
+	color: var(--white);
+	border-top: 1px solid var(--grey);
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+	max-width: 280px;
+	gap: 20px;
+}
+
+.container {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+
+.address {
+	color: #9F9F9F;
+	font-size: 0.8rem;
+}

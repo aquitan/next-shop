@@ -1,0 +1,31 @@
+.btn {
+	padding: 20px 40px;
+	align-items: flex-start;
+	background-color: #B88E2F;
+	color: #fff;
+	border: none;
+	text-transform: uppercase;
+	max-width: 200px;
+	text-align: center;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	display: inline-block;
+
+	&:hover {
+		transform: scale(1.01);
+		box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+		transition: all .2s ease-in-out;
+	}
+}
+
+.cart {
+	background-color: #fff;
+	color: #B88E2F;
+	padding: 10px 40px;
+}
+
+.ghost {
+	border: 1px solid #B88E2F;
+	background-color: transparent;
+	color: #B88E2F;
+}
