@@ -1,6 +1,5 @@
 .link {
     padding: 0 .5rem;
-    color: var(--dark);
     text-decoration: none;
     transition: all .2s ease-in-out;
 }

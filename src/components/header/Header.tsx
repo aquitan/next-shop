@@ -9,6 +9,8 @@ const navLinks = [
     { label: 'Каталог', href: '/catalog' },
     { label: 'О Компании', href: '/about' },
     { label: 'Контакты', href: '/contacts' },
+    { label: 'Блог', href: '/blog' },
+    { label: 'Галерея', href: '/gallery' },
 ]
 
 

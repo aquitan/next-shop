@@ -13,11 +13,15 @@ type Props = {
 	price: string,
 	oldPrice?: string,
 	alt: string,
-	currency: string
+	currency: string,
+	id: string,
+	category: string
 }
 
-const CatalogItem = ({ src, title, description, price, oldPrice, alt, currency }: Props) => {
+const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, currency, category }: Props) => {
 	const [isHover, setIsHover] = useState<boolean>(false)
+
+	console.log('id', id)
 
 
 	const mouseEnterHandler = () => {
@@ -37,7 +41,7 @@ const CatalogItem = ({ src, title, description, price, oldPrice, alt, currency }
 			</div>
 			<div className={styles.info}>
 				<div className={styles.title}>
-					<Link href='/catalog/maslo/1'>{title}</Link>
+					<Link href={`/catalog/${category}/${id}`}>{title}</Link>
 				</div>
 				<div className={styles.description}>{description}</div>
 				<div className={styles.price}>

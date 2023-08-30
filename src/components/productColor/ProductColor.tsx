@@ -11,7 +11,7 @@ export const ProductColor = ({ colors }: ProductColorProps) => {
 			<div className={styles.colors}>
 				{
 					colors.map((item: Color) => (
-						<div key={item.color} title={item.color} className={cs('color', item.color, { [styles.picked]: item.isPicked })}></div>
+						<div key={item.color} title={item.name} className={cs('color', item.color, { [styles.picked]: item.isPicked })}></div>
 					))
 				}
 			</div>

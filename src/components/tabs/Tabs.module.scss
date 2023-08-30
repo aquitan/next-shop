@@ -24,7 +24,20 @@
 	}
 
 	.active {
-		color: var(--dark);
+		color: var(--text);
 		border-color: var(--blue);
+	}
+}
+.characteristics {}
+
+.row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px 30px;
+	margin-bottom: 10px;
+	padding: 10px;
+
+	&:nth-child(even) {
+		background-color: var(--light-grey);
 	}
 }

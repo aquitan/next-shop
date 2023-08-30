@@ -4,6 +4,7 @@ import { FormEventHandler, useState } from "react"
 import { AuthToggle } from "../authToggle/AuthToggle"
 import { Login } from "../login/Login"
 import { Register } from "../register/Register"
+import styles from './AuthForm.module.css'
 
 export const AuthForm = () => {
 	const [switched, setSwitched] = useState<true | false>(false)
@@ -17,7 +18,7 @@ export const AuthForm = () => {
 	}
 
 	return (
-		<div>
+		<div className={styles.wrap}>
 			<AuthToggle switched={switched} setSwitched={() => setSwitched(state => !state)} />
 			<form onSubmit={handleSubmit}>
 				{

@@ -2,7 +2,7 @@ export type TabProps = {
 	advantages?: string[],
 	spheres?: string[],
 	application?: string,
-	pPackage?: string,
+	packaging?: string,
 	description?: string[],
 	code?: string,
 	expirationDate?: string,
@@ -11,4 +11,11 @@ export type TabProps = {
 	content?: string,
 	safety?: string,
 	attention?: string,
+	preparation?: string[],
+	characteristics: ProductCharacteristics[] | undefined
+}
+
+export type ProductCharacteristics = {
+	title: string,
+	value: string
 }

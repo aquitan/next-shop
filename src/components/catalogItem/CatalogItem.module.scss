@@ -1,12 +1,12 @@
 .card {
 	max-width: 285px;
 	width: 100%;
-	background-color: #F4F5F7;
+	background-color: var(--light-grey);
 	position: relative;
 	transition: all .2s ease-in-out;
 
 	&:hover {
-		box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+		box-shadow: 0 0 10px 1px var(--shadow-hover);
 		transition: all .2s ease-in-out;
 	}
 }
@@ -29,6 +29,12 @@
 	font-size: 0.9rem;
 	color: var(--grey);
 	padding-bottom: 10px;
+	line-height: var(--line-height);
+		max-height: calc(var(--max-lines) * 1em * 1.6);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		position: relative;
+		margin-bottom: 20px;
 }
 
 .price {
@@ -48,7 +54,7 @@
 .image {
 	display: flex;
 	justify-content: center;
-	background-color: #fff;
+	background-color: var(--white);
 	position: relative;
 
 	&:hover {
@@ -60,6 +66,7 @@
 	}
 
 	img {
-		height: auto;
+		height: 200px;
+			width: auto;
 	}
 }

@@ -20,13 +20,13 @@
 	width: 40px;
 	height: 40px;
 	border-radius: 50px;
-	box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
+	box-shadow: 0 0 10px 1px var(--shadow);
 	transition: all .2s ease-in-out;
 	border: 1px solid transparent;
 	cursor: pointer;
 
 	&:hover {
-		box-shadow: 0 0 10px 1px rgba(0, 0, 0, .4);
+		box-shadow: 0 0 10px 1px var(--shadow-hover);
 		transition: all .2s ease-in-out;
 	}
 }
@@ -45,5 +45,5 @@
 
 .picked.color {
 	border-color: var(--orange);
-	box-shadow: 0 0 10px 1px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 10px 1px var(--shadow);
 }

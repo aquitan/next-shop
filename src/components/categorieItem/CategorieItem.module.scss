@@ -2,20 +2,24 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: 1px solid var(--grey);
 	border-radius: var(--radius-5);
 	transition: all .2s ease-in-out;
+	box-shadow: 0 0 10px 1px var(--shadow);
 
 	&:hover {
-		box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+		box-shadow: 0 0 10px 1px var(--shadow-hover);
 		transition: all .2s ease-in-out;
 		border-color: transparent;
+		.title {
+				color: var(--blue);
+				transition: all .2s ease-in-out;
+			}
 	}
 }
 
 .title {
 	font-weight: bold;
-	color: var(--dark);
+	color: var(--text);
 	text-decoration: none;
 	padding: 10px 0;
 }

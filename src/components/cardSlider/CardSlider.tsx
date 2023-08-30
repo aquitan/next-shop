@@ -14,9 +14,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import Image from 'next/image';
 
-const imgList = ['nature-1.jpg', 'nature-2.jpg', 'nature-3.jpg', 'nature-4.jpg', 'nature-5.jpg', 'nature-6.jpg', 'nature-7.jpg', 'nature-8.jpg', 'nature-9.jpg', 'nature-10.jpg',]
+// const imgList = ['nature-1.jpg', 'nature-1.jpg', 'nature-1.jpg', ]
 
-export const CardSlider = (): JSX.Element => {
+export const CardSlider = ({ imgs }: any): JSX.Element => {
 	const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
 	const cs = classNames.bind(styles)
@@ -32,9 +32,9 @@ export const CardSlider = (): JSX.Element => {
 				className={cs('mySwiper2')}
 			>
 				{
-					imgList.map(item => (
+					imgs.map((item: string) => (
 						<SwiperSlide key={item}>
-							<img alt='' src={`https://swiperjs.com/demos/images/${item}`} />
+							<img alt='' src={`${item}`} />
 						</SwiperSlide>
 					))
 				}
@@ -51,9 +51,9 @@ export const CardSlider = (): JSX.Element => {
 				direction={'vertical'}
 			>
 				{
-					imgList.map(item => (
+					imgs.map((item: string) => (
 						<SwiperSlide key={item}>
-							<img alt='' src={`https://swiperjs.com/demos/images/${item}`} />
+							<img alt='' src={`${item}`} />
 						</SwiperSlide>
 					))
 				}

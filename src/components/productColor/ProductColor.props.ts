@@ -4,5 +4,6 @@ export type ProductColorProps = {
 
 export type Color = {
 	color: string,
-	isPicked: boolean
+	isPicked: boolean,
+	name: string
 }

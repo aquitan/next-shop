@@ -4,6 +4,9 @@
     align-items: center;
 }
 
+svg.icon {
+    fill: var(--text);
+}
 @media (max-width: 600px) {
     .controls {
         display: none;

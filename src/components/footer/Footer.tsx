@@ -19,7 +19,7 @@ const Footer = () => {
             <div className={styles.container}>
                 <div className={styles.row}>
                     <div className={styles.col}>
-                        <Logo />
+                        <Logo color='light' />
                         <div className={styles.address}>
                             Липецкая область, г.Липецк, Лебедянское шоссе, 3А
                         </div>

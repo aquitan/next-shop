@@ -1,12 +1,23 @@
+import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 import { Icon } from "../icon/Icon";
 import styles from './HeaderControls.module.css'
+import SearchIcon from './search-icon.svg'
+import FavouritesIcon from './favourite-icon.svg'
+import CompareIcon from './compare-icon.svg'
 
 const HeaderControls = () => {
     return (
         <div className={styles.controls}>
-            <Icon path={'/'} src={'/search-icon.svg'} alt='Поиск' width={20} height={20} />
-            <Icon path={'/auth'} src={'/user-cabinet.svg'} alt='Личный кабинет' width={20} height={20} />
-            <Icon path={'/'} amount={2} src={'/favourites-icon.svg'} alt='Избранное' width={20} height={20} />
+            <DarkModeToggle />
+            <Icon path='/search'>
+                <SearchIcon className={styles.icon} />
+            </Icon>
+            <Icon path='/'>
+                <FavouritesIcon className={styles.icon} />
+            </Icon>
+            <Icon path='/'>
+                <CompareIcon className={styles.icon} />
+            </Icon>
         </div>
     )
 }
