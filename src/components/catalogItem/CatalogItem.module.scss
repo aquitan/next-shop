@@ -70,3 +70,15 @@
 			width: auto;
 	}
 }
+@media(max-width: 768px) {
+	.card {
+		max-width: 100%;
+	}
+}
+
+.horizontal.card {
+	border: 1px solid var(--light-grey);
+	box-shadow: var(--shadow);
+	max-width: 100%;
+	display: flex;
+}

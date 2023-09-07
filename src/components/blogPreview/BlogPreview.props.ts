@@ -4,5 +4,6 @@ export type BlogPreviewProps = {
 	author: string,
 	date: string,
 	category: string,
-	img: string
+	img: string,
+	id: string
 }

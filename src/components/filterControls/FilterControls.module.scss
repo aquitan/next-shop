@@ -7,7 +7,7 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	min-width: 200px;
+	min-width: 100px;
 	margin-right: 10px;
 }
 
@@ -15,9 +15,13 @@
 	display: flex;
 	gap: 10px;
 	align-items: center;
+	cursor: pointer;
 }
 
 .count {
 	border-left: 1px solid var(--grey);
 	padding-left: 10px;
+}
+.horizontal.icon svg {
+	fill: var(--blue);
 }

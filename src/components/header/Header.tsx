@@ -6,11 +6,10 @@ import { Sidebar } from "../sidebar/Sidebar";
 
 const navLinks = [
     { label: 'Главная', href: '/' },
-    { label: 'Каталог', href: '/catalog' },
     { label: 'О Компании', href: '/about' },
-    { label: 'Контакты', href: '/contacts' },
+    { label: 'Каталог', href: '/catalog' },
     { label: 'Блог', href: '/blog' },
-    { label: 'Галерея', href: '/gallery' },
+    { label: 'Контакты', href: '/contacts' },
 ]
 
 

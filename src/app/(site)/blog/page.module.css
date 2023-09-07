@@ -1,0 +1,10 @@
+.cols {
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+
+@media(max-width: 1200px) {
+	.recently {
+		display: none;
+	}
+}

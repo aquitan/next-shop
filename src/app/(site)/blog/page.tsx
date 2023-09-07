@@ -1,6 +1,7 @@
-import { PageBanner } from "@/components";
+import { BlogCategories, HTag, PageBanner, RecentPost } from "@/components";
 import { BlogPreview } from "@/components/blogPreview/BlogPreview";
 import Section from "@/components/section/Section";
+import styles from './page.module.css'
 
 
 const posts = [
@@ -31,11 +32,26 @@ const Blog = () => {
 				<PageBanner title="Блог" />
 			</div>
 			<Section>
-				{
-					posts.map(post => (
-						<BlogPreview key={post.id} title={post.title} description={post.description} author={post.author} date={post.date} category={post.category} img={post.img} />
-					))
-				}
+				<div className={styles.cols}>
+					<div>
+						{
+							posts.map(post => (
+								<BlogPreview key={post.id} id={post.id} title={post.title} description={post.description} author={post.author} date={post.date} category={post.category} img={post.img} />
+							))
+						}
+					</div>
+					<div className={styles.recently}>
+						<BlogCategories />
+						<div>
+							<HTag tag='h2' size="m" weight="light">Недавние посты</HTag>
+							{
+								posts.map(post => (
+									<RecentPost title={post.title} img={post.img} date={post.date} />
+								))
+							}
+						</div>
+					</div>
+				</div>
 			</Section>
 		</>
 	)

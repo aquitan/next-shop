@@ -14,7 +14,6 @@ export const AuthForm = () => {
 
 		const data = new FormData(event.currentTarget)
 
-		console.log('form', data)
 	}
 
 	return (

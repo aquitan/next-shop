@@ -7,7 +7,7 @@
 svg.icon {
     fill: var(--text);
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .controls {
         display: none;
     }

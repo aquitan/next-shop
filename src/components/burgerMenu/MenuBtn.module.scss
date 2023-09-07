@@ -6,14 +6,14 @@
 	cursor: pointer;
 	position: absolute;
 	width: 25px;
-	top: 20px;
-	right: 15px;
+	top: 10px;
+		right: 10px;
 	margin: 0;
 	z-index: 999;
 
 	span {
 		display: inline-block;
-		width: 25px;
+		width: 20px;
 		height: 3px;
 		background-color: var(--blue);
 		transition: all .2s ease-in-out;
@@ -32,7 +32,7 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 	.menu {
 		display: grid;
 		transition: all .2s ease-in-out;

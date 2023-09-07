@@ -9,10 +9,11 @@ type Props = {
 	children: ReactNode,
 	link?: string,
 	type?: 'submit' | 'reset' | 'button',
-	color?: string
+	color?: string,
+	onClick?: () => void
 }
 
-const Button = ({ children, link, type, color }: Props) => {
+const Button = ({ children, link, type, color, onClick }: Props) => {
 	const cx = classNames.bind(styles)
 	const classes = cx('btn', type, color)
 
@@ -22,7 +23,7 @@ const Button = ({ children, link, type, color }: Props) => {
 
 
 	return (
-		<button type={type} className={classes}>{children}</button>
+		<button onClick={onClick} type={type} className={classes}>{children}</button>
 	)
 }
 

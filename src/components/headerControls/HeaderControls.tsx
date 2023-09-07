@@ -15,7 +15,7 @@ const HeaderControls = () => {
             <Icon path='/'>
                 <FavouritesIcon className={styles.icon} />
             </Icon>
-            <Icon path='/'>
+            <Icon path='/compare'>
                 <CompareIcon className={styles.icon} />
             </Icon>
         </div>

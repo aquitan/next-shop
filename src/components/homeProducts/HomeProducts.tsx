@@ -1,17 +1,44 @@
-import { ReactNode } from "react";
+'use client'
+
 import styles from './HomeProducts.module.scss'
+import CatalogItem from "../catalogItem/CatalogItem";
+import { useState } from 'react';
+import Button from '../button/Button';
+import classNames from 'classnames/bind';
 
 type Props = {
-	children: ReactNode,
-	title?: string
+	products: any,
+	title?: string,
+	horizontal?: boolean
 }
 
-const HomeProducts = ({ children, title }: Props) => {
+const HomeProducts = ({ products, title, horizontal }: Props) => {
+	const items = 8
+	const [itemsToShow, setItemsToShow] = useState<number>(items)
+
+	const cx = classNames.bind(styles)
+
+	const showMore = () => {
+		setItemsToShow(prev => {
+			if (prev !== products.length) {
+				return products.length
+			}
+			return items
+		})
+	}
+
 	return (
 		<>
 			{title && <h2 className={styles.title}>{title}</h2>}
-			<div className={styles.wrap}>
-				{children}
+			<div className={cx(styles.wrap, { [styles.horizontal]: horizontal })}>
+				{
+					products.slice(0, itemsToShow).map((item: any) => (
+						<CatalogItem horizontal={horizontal} category={item.category} id={item.id} key={item.id} alt={item.title} src={item.imgs[0]} title={item.previewTitle} price={item.variant[0].price} oldPrice={item.oldPrice} description={item.description} currency={'₽'} />
+					))
+				}
+			</div>
+			<div style={{ textAlign: 'center', marginTop: '20px' }}>
+				<Button onClick={showMore} color='ghost'>{itemsToShow === items ? 'Еще' : 'Скрыть'}</Button>
 			</div>
 		</>
 	)

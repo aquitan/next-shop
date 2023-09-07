@@ -8,19 +8,21 @@ import { TabProps } from './Tabs.props';
 import { PTag } from '../pTag/PTag';
 import { Ul } from '../ul/Ul';
 import { HTag } from '../hTag/HTag';
+import Button from '../button/Button';
 
 export const Tabs = ({ advantages, spheres, application, packaging, description, code, expirationDate, consumption, instrumentCleaning, content, safety, attention, preparation, characteristics }: TabProps) => {
 	const [activeTab, setActiveTab] = useState<string>('tab1')
+	const [expand, setExpand] = useState<true | false>(false)
 
-	const cs = classNames.bind(styles);
+	const cx = classNames.bind(styles);
 
 
 	return (
 		<div className={styles.tabs}>
 			<ul className={styles.nav}>
-				<li onClick={() => setActiveTab('tab1')} className={cs({ [styles.active]: activeTab === 'tab1' })}>Описание</li>
+				<li onClick={() => setActiveTab('tab1')} className={cx({ [styles.active]: activeTab === 'tab1' })}>Описание</li>
 				{
-					characteristics?.length ? <li onClick={() => setActiveTab('tab2')} className={cs({ [styles.active]: activeTab === 'tab2' })}>Характеристики</li> : null
+					characteristics?.length ? <li onClick={() => setActiveTab('tab2')} className={cx({ [styles.active]: activeTab === 'tab2' })}>Характеристики</li> : null
 				}
 			</ul>
 
@@ -36,6 +38,8 @@ export const Tabs = ({ advantages, spheres, application, packaging, description,
 						}
 						<HTag tag='h2'>Преимущества</HTag>
 						<Ul list={advantages} />
+							<div className={cx(styles.expandable, { [styles.open]: expand })}>
+
 							<HTag tag='h2'>Области применения</HTag>
 							<Ul list={spheres} />
 							{preparation ? (
@@ -96,6 +100,9 @@ export const Tabs = ({ advantages, spheres, application, packaging, description,
 									<PTag>{attention}</PTag>
 								</>
 							) : null}
+							</div>
+
+							<Button color='ghost' onClick={() => setExpand(prev => !prev)}>{!expand ? 'Показать еще' : 'Скрыть'}</Button>
 					</TabContent>
 				}
 				{

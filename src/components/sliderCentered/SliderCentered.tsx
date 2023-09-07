@@ -1,6 +1,5 @@
 'use client'
 
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,27 +9,35 @@ import 'swiper/css/pagination';
 import styles from './SliderCentered.module.scss'
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { EffectCreative, Navigation } from 'swiper/modules';
+import Image from 'next/image';
 
-const imgList = ['nature-1.jpg', 'nature-2.jpg', 'nature-3.jpg', 'nature-4.jpg', 'nature-5.jpg', 'nature-6.jpg', 'nature-7.jpg', 'nature-8.jpg', 'nature-9.jpg', 'nature-10.jpg',]
+const imgList = ['/bottomSlider/germetik_dlya_gidroizolyacii_polupricepa_cargosil.png', '/bottomSlider/germetik_dlya_shvov_budki_cargosil.png', '/bottomSlider/zhidkaya_gidroizolyzcionnaya_mastika_cargosil_dlya_tentov_i_furgonov.png', '/bottomSlider/gidroizolyaciya_avtofurgona_izotermeskogo_cargosil.png', '/bottomSlider/zimnyaya_zhidkaya_rezina_dlya_gidroizolyacii_furgonov_cargosil_zimniy.png']
 
 export const SliderCentered = () => {
 	return (
 		<>
 			<Swiper
-				slidesPerView={1}
-				spaceBetween={20}
-				centeredSlides={false}
-				pagination={{
-					clickable: true,
+				grabCursor={true}
+				effect={'creative'}
+				creativeEffect={{
+					prev: {
+						shadow: true,
+						translate: [0, 0, -400],
+					},
+					next: {
+						translate: ['100%', 0, 0],
+					},
 				}}
-				modules={[Pagination]}
+				navigation={true}
+				modules={[EffectCreative, Navigation]}
 				className={styles.mySwiperCenter}
 			>
+
 				{
 					imgList.map(item => (
 						<SwiperSlide key={item}>
-							<img className={styles.img} alt='' src={`https://swiperjs.com/demos/images/${item}`} />
+							<Image width={500} height={350} className={styles.img} alt='' src={item} />
 						</SwiperSlide>
 					))
 				}

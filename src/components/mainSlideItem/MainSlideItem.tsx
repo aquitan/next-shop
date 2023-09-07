@@ -13,11 +13,11 @@ type Props = {
 const MainSlideItem = ({ src, alt, text, title, link }: Props) => {
 	return (
 		<div className={styles.slide}>
-			<Image src={src} fill={true} alt={alt} />
+			<Image className={styles.img} src={src} width={1200} height={500} alt={alt} />
 			<div className={styles.info}>
 				<h2 className={styles.title}>{title}</h2>
 				<p>{text}</p>
-				<Button color='ghost' >Подробнее</Button>
+				<Button link={link} color='ghost' >Подробнее</Button>
 			</div>
 		</div>
 	)

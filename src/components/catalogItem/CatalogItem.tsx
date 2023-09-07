@@ -5,6 +5,7 @@ import styles from './CatalogItem.module.scss'
 import CatalogItemShares from "../catalogItemShares/CatalogItemShares";
 import { useState } from "react";
 import Link from "next/link";
+import classNames from "classnames/bind";
 
 type Props = {
 	src: string,
@@ -15,13 +16,15 @@ type Props = {
 	alt: string,
 	currency: string,
 	id: string,
-	category: string
+	category: string,
+	horizontal?: boolean
 }
 
-const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, currency, category }: Props) => {
+const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, currency, category, horizontal }: Props) => {
 	const [isHover, setIsHover] = useState<boolean>(false)
 
-	console.log('id', id)
+	const cx = classNames.bind(styles)
+
 
 
 	const mouseEnterHandler = () => {
@@ -33,11 +36,11 @@ const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, curren
 	}
 
 	return (
-		<div className={styles.card} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
+		<div className={cx(styles.card, { [styles.horizontal]: horizontal })} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
 
 			<div className={styles.image}>
 				<CatalogItemShares isHover={isHover} />
-				<Image src={src} alt={alt} width={200} height={300} />
+				<Image className={styles.img} src={src} alt={alt} width={200} height={300} />
 			</div>
 			<div className={styles.info}>
 				<div className={styles.title}>

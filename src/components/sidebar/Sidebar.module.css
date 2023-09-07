@@ -4,14 +4,14 @@
 	right: 0;
 	bottom: 0;
 	background-color: var(--white);
-	z-index: 999;
+	z-index: 99999;
 	opacity: 1;
 	box-shadow: 0 0 5px 1px var(--shadow);
 	top: 0;
 	right: 0;
 	border-bottom-left-radius: 100%;
-	width: 80px;
-	height: 80px;
+	width: 60px;
+		height: 60px;
 	transition: all .2s ease-in-out;
 	display: none;
 }
@@ -27,6 +27,10 @@
 	z-index: 99;
 	transform: translate(100%);
 	opacity: 0;
+	top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
 }
 
 
@@ -83,7 +87,7 @@
 	border-radius: 0;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 700px) {
 	.wrapper {
 		display: block;
 	}

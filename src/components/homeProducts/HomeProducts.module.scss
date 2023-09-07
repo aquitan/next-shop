@@ -10,3 +10,24 @@
 	color: var(--blue);
 	margin-bottom: 30px;
 }
+@media(max-width: 1040px) {
+	.wrap {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media(max-width: 768px) {
+	.wrap {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media(max-width: 560px) {
+	.wrap {
+		grid-template-columns: 1fr;
+	}
+}
+
+.horizontal {
+	grid-template-columns: 1fr;
+}

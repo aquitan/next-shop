@@ -41,3 +41,10 @@
 		background-color: var(--light-grey);
 	}
 }
+.expandable {
+	display: none;
+}
+
+.open {
+	display: block;
+}

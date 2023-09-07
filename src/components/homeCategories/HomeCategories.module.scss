@@ -1,6 +1,6 @@
 .catalog {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 20px;
 }
 
@@ -9,4 +9,14 @@
 	text-transform: uppercase;
 	color: var(--blue);
 	margin-bottom: 30px;
+}
+.swiperItem {
+	width: 100%;
+	max-width: 275px;
+}
+
+.mySwiper {
+	width: 100%;
+	max-width: 1200px;
+	padding: 20px 5px;
 }

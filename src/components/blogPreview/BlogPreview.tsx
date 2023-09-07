@@ -7,10 +7,10 @@ import DateIcon from './date-icon.svg'
 import CategoryIcon from './category-icon.svg'
 import Link from "next/link"
 
-export const BlogPreview = ({ description, author, date, category, title, img }: BlogPreviewProps): JSX.Element => {
+export const BlogPreview = ({ description, author, date, category, title, img, id }: BlogPreviewProps): JSX.Element => {
 	return (
 		<div className={styles.post}>
-			<Image src={img} width={800} height={500} alt='' />
+			<Image className={styles.img} src={img} width={800} height={500} alt='' />
 			<div className={styles.info}>
 				<div className={styles.item}><AuthorIcon /> {author}</div>
 				<div className={styles.item}><DateIcon /> {date}</div>
@@ -18,7 +18,7 @@ export const BlogPreview = ({ description, author, date, category, title, img }:
 			</div>
 			<HTag tag='h2' >{title}</HTag>
 			<div className={styles.description}>{description}</div>
-			<Link className={styles.read} href='/blog/post'>Читать</Link>
+			<Link className={styles.read} href={`/blog/${id}`}>Читать</Link>
 		</div>
 	)
 }

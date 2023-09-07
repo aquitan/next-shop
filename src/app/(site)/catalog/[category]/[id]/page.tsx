@@ -21,7 +21,6 @@ export const generateMetadata = async ({ params: { id } }: Props): Promise<Metad
 }
 
 const getProduct = async (id: string) => {
-	const res = await fetch(`https://fakestoreapi.com/products/${id}`)
 	const el = productTest.find(item => (item.id === id))
 	if (!el) {
 		return

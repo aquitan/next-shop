@@ -17,6 +17,12 @@
 	}
 }
 
+.img {
+	max-height: 200px;
+	height: 100%;
+	width: auto;
+	text-align: center;
+}
 .title {
 	font-weight: bold;
 	color: var(--text);
