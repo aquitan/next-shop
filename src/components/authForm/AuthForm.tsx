@@ -9,7 +9,7 @@ import styles from './AuthForm.module.css'
 export const AuthForm = () => {
 	const [switched, setSwitched] = useState<true | false>(false)
 
-	const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
+	const handleSubmit: FormEventHandler<HTMLFormElement> = async (event:any) => {
 		event.preventDefault()
 
 		const data = new FormData(event.currentTarget)

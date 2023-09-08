@@ -1,4 +1,5 @@
 import { PageBanner } from "@/components";
+import { CompareWrap } from "@/components/compareWrap/CompareWrap";
 import Section from "@/components/section/Section";
 
 const Compare = () => {
@@ -8,7 +9,9 @@ const Compare = () => {
 				<PageBanner title="Сравнение" />
 			</div>
 			<Section>
-				<h1>Compare</h1>
+				<div>
+					<CompareWrap/>
+				</div>
 			</Section>
 		</>
 	)
