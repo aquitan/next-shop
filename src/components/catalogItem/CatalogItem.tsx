@@ -39,7 +39,7 @@ const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, curren
 		<div className={cx(styles.card, { [styles.horizontal]: horizontal })} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
 
 			<div className={styles.image}>
-				<CatalogItemShares isHover={isHover} />
+				<CatalogItemShares id={id} isHover={isHover} />
 				<Image className={styles.img} src={src} alt={alt} width={200} height={300} />
 			</div>
 			<div className={styles.info}>

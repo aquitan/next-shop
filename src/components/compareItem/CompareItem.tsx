@@ -1,19 +1,20 @@
+import Image from 'next/image'
 import styles from './CompareItem.module.scss'
 
 type CompareItemProps = {
-    characteristics: any[]
+    product: any
 }
 
-export const CompareItem = ({characteristics}:CompareItemProps) => {
+export const CompareItem = ({ product }: CompareItemProps) => {
     return(
-        <div>
-            
+        <div className={styles.wrap}>
+            <Image src={product.imgs[0]} height={100} width={100} alt={product.title} />
             <ul className={styles.list}>
                 {
-                    characteristics.map(item => (
+                    product.characteristics.map((item: any) => (
                         <li className={styles.listItem}>
-                            <div>{item.title}</div>
-                            <div>{item.value}</div>
+                            <div className={styles.title}>{item.title}</div>
+                            <div className={styles.text}>{item.value}</div>
                         </li>
                     ))
                 }

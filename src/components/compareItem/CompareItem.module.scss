@@ -5,4 +5,21 @@
 .listItem {
     border-bottom: 1px solid var(--light-grey);
     padding: 10px 0;
+    width: 300px;
+        margin-bottom: 30px;
+    }
+    
+    .title {
+        color: var(--grey);
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+    
+    .text {
+        color: var(--text);
+        font-size: 14px;
+    }
+    
+    .wrap {
+        cursor: pointer;
 }

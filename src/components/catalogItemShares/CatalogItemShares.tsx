@@ -1,14 +1,27 @@
+'use client'
+
 import Button from '../button/Button'
 import styles from './CatalogItemShares.module.scss'
 import Compare from './icons/compare.svg'
 import Share from './icons/share.svg'
 import Like from './icons/like.svg'
+import { useCompare } from '../../../store'
+import { shallow } from 'zustand/shallow'
+import { productTest } from '../../../mockData/productsData'
 
 type Props = {
-	isHover: boolean
+	isHover: boolean,
+	id: string
 }
 
-const CatalogItemShares = ({ isHover }: Props): JSX.Element => {
+const CatalogItemShares = ({ isHover, id }: Props): JSX.Element => {
+	const addProduct = useCompare((state) => state.addProduct)
+
+
+	const addToCompare = () => {
+		addProduct(id, productTest)
+	}
+
 	return (
 		<div className={`${styles.shares} ${isHover ? styles.hover : ''}`}>
 			<div className={styles.shares__inner}>
@@ -17,7 +30,7 @@ const CatalogItemShares = ({ isHover }: Props): JSX.Element => {
 					<div className={styles.shares__actions__item}>
 						<Like />
 					</div>
-					<div className={styles.shares__actions__item}>
+					<div onClick={addToCompare} className={styles.shares__actions__item}>
 						<Compare />
 					</div>
 					<div className={styles.shares__actions__item}>

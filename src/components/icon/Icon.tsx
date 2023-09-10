@@ -9,7 +9,7 @@ export const Icon = ({ path, amount, children }: IconProps): JSX.Element => {
     return (
         <Link href={path} className={styles.icon}>
             {children}
-            {amount && <span data-count={amount}></span>}
+            {amount ? <span data-count={amount}></span> : null}
         </Link>
     )
 }
