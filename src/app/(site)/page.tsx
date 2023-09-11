@@ -11,12 +11,12 @@ import styles from './page.module.css'
 
 
 const categories = [
-  { img: '/categories/germetic.png', title: 'Гидроизоляция', link: '/catalog', id: 1 },
-  { img: '/categories/tkan.png', title: 'Армирующая лента', link: '/catalog', id: 2 },
-  { img: '/categories/masla.png', title: 'Масла', link: '/catalog', id: 3 },
-  { img: '/categories/smazky.png', title: 'Смазки', link: '/catalog', id: 4 },
-  { img: '/categories/chernitely.png', title: 'Чернители', link: '/catalog', id: 5 },
-  { img: '/categories/anticory.png', title: 'Антикоры', link: '/catalog', id: 6 },
+  { img: '/categories/germetic.png', title: 'Мастики', link: '/catalog', id: 1 },
+  { img: '/categories/anticory.png', title: 'Антикоры', link: '/catalog', id: 2 },
+  { img: '/categories/smazky.png', title: 'Смазки', link: '/catalog', id: 3 },
+  { img: '/categories/masla.png', title: 'Масла', link: '/catalog', id: 4 },
+  { img: '/categories/silicony.png', title: 'Силиконы', link: '/catalog', id: 5 },
+  { img: '/categories/chernitely.png', title: 'Чернители', link: '/catalog', id: 6 },
 ]
 
 
