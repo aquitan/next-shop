@@ -38,7 +38,7 @@ export const CompareWrap = () => {
                             ))
                         }
                     </Swiper>
-                    : <PageEmpty/>
+                    : <PageEmpty page='сравнения'/>
             }
         </div>
     )
