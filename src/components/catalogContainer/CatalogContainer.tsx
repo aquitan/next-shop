@@ -6,7 +6,7 @@ import HomeProducts from "../homeProducts/HomeProducts"
 import Section from "../section/Section"
 
 export const CatalogContainer = ({ products }: any) => {
-	const [isHorizontal, setIsHorizontal] = useState<true | false>(true)
+	const [isHorizontal, setIsHorizontal] = useState<true | false>(false)
 
 	const onRowDirection = () => {
 		setIsHorizontal(true)

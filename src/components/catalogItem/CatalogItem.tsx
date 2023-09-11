@@ -6,6 +6,8 @@ import CatalogItemShares from "../catalogItemShares/CatalogItemShares";
 import { useState } from "react";
 import Link from "next/link";
 import classNames from "classnames/bind";
+import Button from "../button/Button";
+import { useFavourites } from "../../../store";
 
 type Props = {
 	src: string,
@@ -17,11 +19,13 @@ type Props = {
 	currency: string,
 	id: string,
 	category: string,
-	horizontal?: boolean
+	horizontal?: boolean,
+	favourite?: boolean
 }
 
-const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, currency, category, horizontal }: Props) => {
+const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, currency, category, horizontal, favourite }: Props) => {
 	const [isHover, setIsHover] = useState<boolean>(false)
+	const removeFav = useFavourites((state) => state.removeFav)
 
 	const cx = classNames.bind(styles)
 
@@ -33,6 +37,10 @@ const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, curren
 
 	const mouseLeaveHandler = () => {
 		setIsHover(false)
+	}
+
+	const onFavRemove = () => {
+		removeFav(id)
 	}
 
 	return (
@@ -54,6 +62,13 @@ const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, curren
 						<span className={styles.old}>{oldPrice} {oldPrice ? currency : null}</span>
 					</div>
 				</div>
+				{
+					favourite ? 
+					<div style={{position: 'absolute', bottom: 20, right: 20}}>
+						<Button onClick={onFavRemove} color="danger">Убрать</Button>
+					</div>
+					 : null
+				}
 			</div>
 		</div>
 	)

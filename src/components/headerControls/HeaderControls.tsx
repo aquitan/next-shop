@@ -6,10 +6,11 @@ import styles from './HeaderControls.module.css'
 import SearchIcon from './search-icon.svg'
 import FavouritesIcon from './favourite-icon.svg'
 import CompareIcon from './compare-icon.svg'
-import { useCompare } from "../../../store";
+import { useCompare, useFavourites } from "../../../store";
 
 const HeaderControls = () => {
     const products = useCompare((state) => state.products)
+    const favourites = useFavourites((state) => state.favourites)
 
     return (
         <div className={styles.controls}>
@@ -17,7 +18,7 @@ const HeaderControls = () => {
             <Icon path='/search'>
                 <SearchIcon className={styles.icon} />
             </Icon>
-            <Icon path='/'>
+            <Icon amount={favourites.length} path='/favourites'>
                 <FavouritesIcon className={styles.icon} />
             </Icon>
             <Icon amount={products.length} path='/compare'>

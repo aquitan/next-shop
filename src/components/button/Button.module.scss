@@ -1,21 +1,59 @@
-.btn {
-	padding: 20px 40px;
-	align-items: flex-start;
-	background-color: #B88E2F;
-	color: #fff;
-	border: none;
-	text-transform: uppercase;
-	max-width: 200px;
-	text-align: center;
-	cursor: pointer;
-	transition: all .2s ease-in-out;
-	display: inline-block;
+// .btn {
+// 	padding: 20px 40px;
+// 	align-items: flex-start;
+// 	background-color: #B88E2F;
+// 	color: #fff;
+// 	border: none;
+// 	text-transform: uppercase;
+// 	max-width: 200px;
+// 	text-align: center;
+// 	cursor: pointer;
+// 	transition: all .2s ease-in-out;
+// 	display: inline-block;
 
-	&:hover {
-		transform: scale(1.01);
-		box-shadow: 0 0 10px 1px var(--shadow-hover);
-		transition: all .2s ease-in-out;
-	}
+// 	&:hover {
+// 		transform: scale(1.01);
+// 		box-shadow: 0 0 10px 1px var(--shadow-hover);
+// 		transition: all .2s ease-in-out;
+// 	}
+// }
+
+
+
+
+.btn {
+    display: inline-block;
+    color: var(--orange);
+    cursor: pointer;
+    border: 1px solid var(--orange);
+    padding: 10px 20px;
+    border-radius: 5px;
+	text-align: center;
+	max-width: 400px;
+
+    position: relative;
+    isolation: isolate;
+    transform-origin: right;
+
+    &:hover {
+        color: var(--white);
+    }
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: var(--orange);
+    inset: 0;
+
+    scale: 0 1;
+    transition: scale 450ms;
+}
+
+.btn:hover::after, .btn:focus-visible::after {
+    scale: 1 1;
+    transform-origin: left;
 }
 
 .cart {
@@ -26,6 +64,15 @@
 
 .ghost {
 	border: 1px solid #B88E2F;
-	background-color: transparent;
+	background-color: #fff;
 	color: #B88E2F;
+}
+
+.danger {
+    color: tomato;
+    border: 1px solid tomato;
+    background-color: #fff;
+    &::after {
+        background-color: tomato;
+    }
 }

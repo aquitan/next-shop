@@ -1,0 +1,42 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.link {
+    display: inline-block;
+    color: var(--orange);
+    cursor: pointer;
+    border: 1px solid var(--orange);
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    position: relative;
+    isolation: isolate;
+    transform-origin: right;
+
+    &:hover {
+        color: var(--white);
+    }
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: var(--orange);
+    inset: 0;
+
+    scale: 0 1;
+    transition: scale 450ms;
+}
+
+.link:hover::after, .link:focus-visible::after {
+    scale: 1 1;
+    transform-origin: left;
+}

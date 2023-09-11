@@ -9,6 +9,7 @@ import { Pagination } from "swiper/modules"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useCompare } from "../../../store"
+import { PageEmpty } from "../pageEmpty/PageEmpty"
 
 
 export const CompareWrap = () => {
@@ -37,7 +38,7 @@ export const CompareWrap = () => {
                             ))
                         }
                     </Swiper>
-                    : <h1>Добавьте для сравнения</h1>
+                    : <PageEmpty/>
             }
         </div>
     )
