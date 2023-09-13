@@ -36,13 +36,23 @@ export const Tabs = ({ advantages, spheres, application, packaging, description,
 								<PTag size='m' key={index}>{p}</PTag>
 							))
 						}
-						<HTag tag='h2'>Преимущества</HTag>
-						<Ul list={advantages} />
+							{advantages?.length ? (
+								<>
+									<HTag tag='h2'>Преимущества</HTag>
+									<Ul list={advantages} />
+								</>
+							) : null}
 							<div className={cx(styles.expandable, { [styles.open]: expand })}>
 
-							<HTag tag='h2'>Области применения</HTag>
-							<Ul list={spheres} />
-							{preparation ? (
+							{
+								spheres?.length ? (
+									<>
+										<HTag tag='h2'>Области применения</HTag>
+										<Ul list={spheres} />
+									</>
+								) :null
+							}
+							{preparation?.length ? (
 								<>
 									<HTag tag='h2'>Подготовка поверхности</HTag>
 									<Ul list={preparation} />

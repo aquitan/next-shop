@@ -1,8 +1,51 @@
-const Category = () => {
+import { Metadata } from "next"
+import { productTest } from "../../../../../mockData/productsData"
+import Section from "@/components/section/Section"
+import CatalogItem from "@/components/catalogItem/CatalogItem"
+import styles from './page.module.scss'
+import { PageBanner } from "@/components"
+
+
+type Props = {
+	params: {
+		category: string
+	}
+}
+
+export const generateMetadata = async ({ params: { category } }: Props): Promise<Metadata> => {
+	return {
+		title: `Cargosil | ${category}`,
+		description: `Продукция Cargosil ${category}`
+	}
+}
+
+const getProduct = async (category: string) => {
+	const el = productTest.filter(item => (item.category === category))
+	if (!el) {
+		return
+	}
+
+	return el
+}
+
+const Category = async ({ params: { category } }: Props) => {
+	const products = await getProduct(category)
+
+
 	return (
-		<div>
-			<h2>Category</h2>
-		</div>
+		<>
+			<PageBanner title='Категория' />
+			<Section>
+				<div className={styles.wrap}>
+					{
+						products?.map((item: any) => (
+							<CatalogItem category={item.category} id={item.id} key={item.id} alt={item.title} src={item.imgs[0]} title={item.previewTitle} price={item.variant[0].price} oldPrice={item.oldPrice} description={item.description} currency={'₽'} />
+						))
+					}
+				</div>
+			</Section>
+		</>
+		
 	)
 }
 

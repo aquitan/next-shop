@@ -44,7 +44,7 @@ const Product = async ({ params: { id } }: Props) => {
 					<div className={styles.info}>
 						<h3 className={styles.title}>{product?.title}</h3>
 						<div className={styles.price}>
-							Цена: {product?.variant[0].price} &#8381;
+							Цена: от {product?.variant[0].price} &#8381;
 						</div>
 						<Rating />
 						<div style={{ marginBottom: 10, color: '#9F9F9F' }}>Объем:</div>
@@ -62,7 +62,7 @@ const Product = async ({ params: { id } }: Props) => {
 						<BuyLinks url={product?.link} />
 
 						<Underline />
-						<ProductAdditionalInfo categoryName={product?.category} />
+						<ProductAdditionalInfo categoryName={product?.categoryRu} />
 					</div>
 				</div>
 				<Underline />

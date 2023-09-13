@@ -11,8 +11,9 @@
     --radius-5: 5px;
     --dark-grey: #999;
     --shadow: rgba(0, 0, 0, .2);
-      --shadow-hover: rgba(0, 0, 0, .5);
-      --max-lines: 3;
+    --shadow-hover: rgba(0, 0, 0, .5);
+    --max-lines: 3;
+    --sceleton-shadow: rgba(33, 33, 33, 0.15);
 }
 
 :root .dark {
@@ -28,6 +29,7 @@
   --dark-grey: #999;
   --shadow: rgba(255, 255, 255, .2);
   --shadow-hover: rgba(255, 255, 255, .5);
+  --sceleton-shadow: rgba(255, 255, 255, 0.15);
 }
 * {
   box-sizing: border-box;

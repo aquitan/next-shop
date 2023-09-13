@@ -1,10 +1,10 @@
-import { Loader } from "@/components/loader/Loader";
+import { SceletonLoader } from "@/components";
 import Section from "@/components/section/Section"
 
 const LoadingMain = () => {
 	return (
 		<Section>
-			<Loader />
+			<SceletonLoader/>
 		</Section>
 	)
 }

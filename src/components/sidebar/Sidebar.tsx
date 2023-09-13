@@ -48,7 +48,7 @@ export const Sidebar = () => {
 				</div>
 				<div className={styles.item}>
 					<BlogIcon />
-					<Link onClick={openMenu} href='/'>Блог</Link>
+					<Link onClick={openMenu} href='/blog'>Блог</Link>
 				</div>
 			</div>
 		</div>
