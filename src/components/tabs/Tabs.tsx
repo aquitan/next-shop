@@ -8,7 +8,7 @@ import { TabProps } from './Tabs.props';
 import { PTag } from '../pTag/PTag';
 import { Ul } from '../ul/Ul';
 import { HTag } from '../hTag/HTag';
-import Button from '../button/Button';
+import Button from '../customButton/CustomButton';
 
 export const Tabs = ({ advantages, spheres, application, packaging, description, code, expirationDate, consumption, instrumentCleaning, content, safety, attention, preparation, characteristics }: TabProps) => {
 	const [activeTab, setActiveTab] = useState<string>('tab1')

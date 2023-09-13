@@ -1,5 +1,5 @@
 import { SliderCentered } from "@/components"
-import Button from "@/components/button/Button"
+import Button from "@/components/customButton/CustomButton"
 import CategorieItem from "@/components/categorieItem/CategorieItems"
 import HomeCategories from "@/components/homeCategories/HomeCategories"
 import HomeProducts from "@/components/homeProducts/HomeProducts"

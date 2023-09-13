@@ -3,7 +3,7 @@
 import styles from './HomeProducts.module.scss'
 import CatalogItem from "../catalogItem/CatalogItem";
 import { useState } from 'react';
-import Button from '../button/Button';
+import Button from '../customButton/CustomButton';
 import classNames from 'classnames/bind';
 
 type Props = {

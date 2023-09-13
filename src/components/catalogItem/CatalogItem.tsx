@@ -6,7 +6,7 @@ import CatalogItemShares from "../catalogItemShares/CatalogItemShares";
 import { useState } from "react";
 import Link from "next/link";
 import classNames from "classnames/bind";
-import Button from "../button/Button";
+import Button from "../customButton/CustomButton";
 import { useFavourites } from "../../../store";
 
 type Props = {

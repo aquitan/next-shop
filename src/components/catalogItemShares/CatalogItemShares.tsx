@@ -1,6 +1,6 @@
 'use client'
 
-import Button from '../button/Button'
+import Button from '../customButton/CustomButton'
 import styles from './CatalogItemShares.module.scss'
 import Compare from './icons/compare.svg'
 import Share from './icons/share.svg'
