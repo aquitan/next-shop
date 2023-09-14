@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import styles from './Sidebar.module.css'
+import styles from './Sidebar.module.scss'
 import HmeIcon from './home-icon.svg'
 import CatalogIcon from './catalog-icon.svg'
 import AboutIcon from './about-icon.svg'
@@ -12,6 +12,7 @@ import { Input } from '../input/Input'
 import classNames from 'classnames/bind'
 import { BurgerMenu } from '../burgerMenu/BurgerMenu'
 import { useState } from 'react'
+import DarkModeToggle from '../darkModeToggle/DarkModeToggle'
 
 export const Sidebar = () => {
 	const cx = classNames.bind(styles)
@@ -27,8 +28,9 @@ export const Sidebar = () => {
 			<BurgerMenu open={open} onClick={openMenu} />
 			<div className={styles.sidebar}>
 				<div className={styles.logo}>
-					<Logo />
+					<Logo /><DarkModeToggle />
 				</div>
+				
 				<Input className={'search'} placeholder='Поиск' type='search' name='search' />
 				<div className={styles.item}>
 					<HmeIcon />

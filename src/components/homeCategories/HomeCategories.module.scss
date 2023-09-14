@@ -1,18 +1,8 @@
-.catalog {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 20px;
-}
-
 .title {
 	text-align: center;
 	text-transform: uppercase;
 	color: var(--blue);
 	margin-bottom: 30px;
-}
-.swiperItem {
-	width: 100%;
-	max-width: 275px;
 }
 
 .mySwiper {

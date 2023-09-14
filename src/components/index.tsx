@@ -1,5 +1,5 @@
 export * from './badge/Badge';
-export * from './customButton/CustomButton';
+export * from './button/Button';
 export * from './catalogItem/CatalogItem';
 export * from './catalogItemShares/CatalogItemShares';
 export * from './categorieItem/CategorieItems';

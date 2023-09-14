@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from './MainSliderItem.module.scss'
-import Button from "../customButton/CustomButton";
+import Button from "../button/Button";
 
 type Props = {
 	src: string,

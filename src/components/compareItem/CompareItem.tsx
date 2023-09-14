@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './CompareItem.module.scss'
-import Button from '../customButton/CustomButton'
+import Button from '../button/Button'
 import { useCompare } from '../../../store'
 
 type CompareItemProps = {

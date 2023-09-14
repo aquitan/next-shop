@@ -7,6 +7,7 @@ import Footer from '@/components/footer/Footer'
 import { ThemeProvider } from '../../../context/ThemeContext'
 import { Suspense } from 'react'
 import LoadingMain from './loading'
+import { Sidebar } from '@/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <ThemeProvider>
           <main className={styles.content}>
             <Header />
+            <Sidebar/>
             <div className={styles.container}>
               <Suspense fallback={<LoadingMain/>}>
                 {children}

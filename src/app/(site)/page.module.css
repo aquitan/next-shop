@@ -12,21 +12,7 @@
 .container {
 	margin: 0 auto;
 }
-.bottomSliderWrap {
-	display: grid;
-	grid-template-columns: 1fr auto;
-	gap: 30px;
-}
 
-.bottomSliderTitle {
-	font-size: 32px;
-	line-height: 40px;
-	margin: 50px 0 20px 0;
-}
-
-.bottomSlider {
-	max-width: 500px;
-}
 
 @media(max-width: 1024px) {
 	.bottomSliderTitle {

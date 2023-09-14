@@ -30,13 +30,18 @@ export const SliderCentered = () => {
 					},
 				}}
 				navigation={true}
+				slidesPerView={1}
+				spaceBetween={30}
+				pagination={{
+				clickable: true,
+				}}
 				modules={[EffectCreative, Navigation]}
 				className={styles.mySwiperCenter}
 			>
 
 				{
 					imgList.map(item => (
-						<SwiperSlide key={item}>
+						<SwiperSlide className={styles.imgWrap} key={item}>
 							<Image width={500} height={350} className={styles.img} alt='' src={item} />
 						</SwiperSlide>
 					))

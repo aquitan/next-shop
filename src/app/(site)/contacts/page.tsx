@@ -1,5 +1,5 @@
 import { PTag, PageBanner } from "@/components";
-import Button from "@/components/customButton/CustomButton";
+import Button from "@/components/button/Button";
 import { HTag } from "@/components/hTag/HTag";
 import { Input } from "@/components/input/Input";
 import Section from "@/components/section/Section";

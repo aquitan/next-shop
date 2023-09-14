@@ -16,7 +16,7 @@ export const FilterControls = ({ length, horizontal, onRowDirection, onColumnDir
 					<FilterIcon />
 					<span>Фильтр</span>
 				</span> */}
-				<span onClick={onRowDirection} className={cx(styles.icon, { [styles.horizontal]: horizontal })}>
+				<span onClick={onRowDirection} className={cx(styles.icon, { [styles.horizontal]: horizontal }, styles.horisontalIcon)}>
 					<CardsRowIcon />
 				</span>
 				<span onClick={onColumnDirection} className={cx(styles.icon, { [styles.horizontal]: !horizontal })}>

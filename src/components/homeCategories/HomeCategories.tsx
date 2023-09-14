@@ -4,10 +4,11 @@ import styles from './HomeCategories.module.scss'
 import Section from "../section/Section";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import CategorieItem from "../categorieItem/CategorieItems";
 
 type Props = {
@@ -26,27 +27,26 @@ const HomeCategories = ({ categories }: Props) => {
 			<div className={styles.catalog}>
 				<Swiper
 					slidesPerView={1}
-					spaceBetween={30}
-
+					spaceBetween={10}
 					pagination={{
-						clickable: true,
+					  clickable: true,
 					}}
 					breakpoints={{
-						640: {
-							slidesPerView: 2,
-							spaceBetween: 10
-						},
-						768: {
-							slidesPerView: 3
-						},
-						900: {
-							slidesPerView: 3
-						},
-						1200: {
-							slidesPerView: 4
-						},
+					  640: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					  },
+					  768: {
+						slidesPerView: 3,
+						spaceBetween: 40,
+					  },
+					  1024: {
+						slidesPerView: 4,
+						spaceBetween: 50,
+					  },
 					}}
-					modules={[Pagination]}
+					modules={[Pagination, Navigation]}
+					navigation={true}
 					className={styles.mySwiper}
 				>
 

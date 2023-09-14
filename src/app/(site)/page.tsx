@@ -1,12 +1,9 @@
-import { SliderCentered } from "@/components"
-import Button from "@/components/customButton/CustomButton"
-import CategorieItem from "@/components/categorieItem/CategorieItems"
 import HomeCategories from "@/components/homeCategories/HomeCategories"
 import HomeProducts from "@/components/homeProducts/HomeProducts"
 import MainBanner from "@/components/mainBanner/MainBanner"
 import Section from "@/components/section/Section"
 import { productTest } from "../../../mockData/productsData"
-import styles from './page.module.css'
+import BottomSlider from "@/components/bottomSlider/BottomSlider"
 
 
 
@@ -33,20 +30,7 @@ export default function Home() {
         <HomeProducts products={productTest} title="наша продукция" />
       </Section>
       <Section bg={'bg'} wide={'wide'}>
-        <div className={styles.bottomSliderWrap}>
-          <div >
-            <div className={styles.bottomSliderTitle}>
-              CARGOSIL — надежный и простой в применении герметик на основе синтетического или акрил-каучука.
-            </div>
-            <div style={{ fontSize: 16, margin: '10px 0 30px 0', color: 'var(--dark-grey)' }}>
-              Идеально подходит для ремонта и гидроизоляции всех видов грузовых полуприцепов, фургонов и тентов, а также пассажирского транспорта. Не требует смешения компонентов и обеспечивает великолепную гидрозащиту уже через 24 часа после нанесения.
-            </div>
-            <Button color='cart' link="/catalog">Каталог</Button>
-          </div>
-          <div className={styles.bottomSlider}>
-            <SliderCentered />
-          </div>
-        </div>
+        <BottomSlider />
       </Section>
     </>
   )

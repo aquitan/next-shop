@@ -16,12 +16,6 @@ const DarkModeToggle = (): JSX.Element => {
 
 	return (
 		<div className={cx(styles.container, { [styles.dark]: value, [styles.light]: !value })} onClick={changeMode}>
-			{/* <div className={styles.icon}>
-				<Moon />
-			</div>
-			<div className={styles.icon}>
-				<Sun />
-			</div> */}
 			<div className={styles.ball}>
 				{
 					value ? <Moon /> : <Sun />

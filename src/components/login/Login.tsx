@@ -1,4 +1,4 @@
-import Button from "../customButton/CustomButton"
+import Button from "../button/Button"
 import { Input } from "../input/Input"
 
 export const Login = () => {

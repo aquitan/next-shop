@@ -25,3 +25,9 @@
 .horizontal.icon svg {
 	fill: var(--blue);
 }
+
+.horisontalIcon {
+	@media(max-width: 600px) {
+		display: none;
+	}
+}

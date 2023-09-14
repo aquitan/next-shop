@@ -13,7 +13,7 @@ type Props = {
 	onClick?: () => void
 }
 
-const CustomButton = ({ children, link, type, color, onClick }: Props) => {
+const Button = ({ children, link, type, color, onClick }: Props) => {
 	const cx = classNames.bind(styles)
 	const classes = cx('btn', type, color)
 
@@ -27,4 +27,4 @@ const CustomButton = ({ children, link, type, color, onClick }: Props) => {
 	)
 }
 
-export default CustomButton;
+export default Button;
