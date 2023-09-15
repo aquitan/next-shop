@@ -1,6 +1,6 @@
 export type FilterControlsProps = {
-	length: number,
+	length?: number,
 	horizontal?: boolean,
-	onColumnDirection: () => void,
-	onRowDirection: () => void
+	onColumnDirection?: () => void,
+	onRowDirection?: () => void
 }
