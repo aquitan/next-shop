@@ -1,0 +1,45 @@
+.slider_card {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 10px;
+	max-height: 490px;
+	
+}
+
+.mySwiper {
+	box-sizing: border-box;
+	max-width: 100px;
+}
+
+.mySwiper img {
+	border-radius: 5px;
+}
+
+.mySwiper2 img {
+	border-radius: 10px;
+}
+
+
+@media(max-width: 640px) {
+	.slider_card {
+		flex-direction: unset;
+		display: unset;
+	}
+	.mySwiper {
+		display: none;
+	}
+	.mySwiper2 {
+		max-width: 100%;
+		width: 100%;
+	}
+	.slider {
+		max-width: 400px;
+	}
+
+	.mySwiper {
+		max-width: 350px;
+	}
+	.slider {
+		max-width: 400px;
+	}
+}

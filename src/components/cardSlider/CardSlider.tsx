@@ -5,7 +5,7 @@ import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import classNames from 'classnames/bind';
-import styles from './CardSlider.module.css'
+import styles from './CardSlider.module.scss'
 
 // Import Swiper styles
 import 'swiper/css';
