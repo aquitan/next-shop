@@ -7,9 +7,13 @@
 }
 
 .row {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
+	@media(max-width: 600px) {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
 }
 
 .col {
@@ -28,4 +32,11 @@
 .address {
 	color: #9F9F9F;
 	font-size: 0.8rem;
+}
+.links {
+	@media(max-width: 600px) {
+		display: flex;
+		gap: 10px;
+		flex-direction: row;
+	}
 }

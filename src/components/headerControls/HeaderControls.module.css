@@ -12,3 +12,7 @@ svg.icon {
         display: none;
     }
 }
+.icon {
+    width: 20px;
+    cursor: pointer;
+}

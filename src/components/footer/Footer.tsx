@@ -25,7 +25,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className={styles.col}>
+                    <div className={`${styles.col} ${styles.links}`}>
                         <FooterLinks links={navLinks} />
                     </div>
 

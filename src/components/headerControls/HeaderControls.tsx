@@ -8,16 +8,25 @@ import FavouritesIcon from './favourite-icon.svg'
 import CompareIcon from './compare-icon.svg'
 import { useCompare, useFavourites } from "../../../store";
 
-const HeaderControls = () => {
+
+type HeaderControlsProps = {
+    setActive: (state: any) => any,
+    active: boolean
+}
+
+const HeaderControls = ({ setActive, active }: HeaderControlsProps) => {
     const products = useCompare((state) => state.products)
     const favourites = useFavourites((state) => state.favourites)
+
+    const onSearch = () => {
+        console.log('search')
+        setActive((active: boolean) => !active)
+    }
 
     return (
         <div className={styles.controls}>
             <DarkModeToggle />
-            <Icon path='/search'>
-                <SearchIcon className={styles.icon} />
-            </Icon>
+            <SearchIcon onClick={onSearch} className={styles.icon} />
             <Icon amount={favourites.length} path='/favourites'>
                 <FavouritesIcon className={styles.icon} />
             </Icon>

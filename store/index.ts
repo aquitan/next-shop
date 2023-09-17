@@ -3,7 +3,7 @@ import { create } from 'zustand'
 type UseCompareType = {
 	products: any[],
 	loading: boolean,
-	addProduct: (id: string, items: any[]) => void,
+	addProduct: (id: string | undefined, items: any[]) => void,
 	removeProduct: (id: string) => any
 }
 type UseFavouritesType = {

@@ -1,0 +1,10 @@
+.search {
+	background-color: #fff;
+	box-shadow: var(--shadow);
+	position: absolute;
+	transform: translateX(100%);
+}
+
+.active {
+	transform: translateX(0);
+}

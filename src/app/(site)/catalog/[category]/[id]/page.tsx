@@ -59,7 +59,7 @@ const Product = async ({ params: { id } }: Props) => {
 								<ProductColor colors={product.colors} />
 								: null
 						}
-						<BuyLinks url={product?.link} />
+						<BuyLinks id={product?.id} url={product?.link} />
 
 						<Underline />
 						<ProductAdditionalInfo categoryName={product?.categoryRu} />
