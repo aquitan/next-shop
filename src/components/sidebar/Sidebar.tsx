@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import styles from './Sidebar.module.scss'
-import HmeIcon from './home-icon.svg'
+import HomeIcon from './home-icon.svg'
 import CatalogIcon from './catalog-icon.svg'
 import AboutIcon from './about-icon.svg'
 import ContactsIcon from './contacts-icon.svg'
@@ -33,7 +33,7 @@ export const Sidebar = () => {
 				
 				<Input className={'search'} placeholder='Поиск' type='search' name='search' />
 				<div className={styles.item}>
-					<HmeIcon />
+					<HomeIcon />
 					<Link onClick={openMenu} href='/'>Главаная</Link>
 				</div>
 				<div className={styles.item}>
