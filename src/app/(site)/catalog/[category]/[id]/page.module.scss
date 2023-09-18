@@ -18,6 +18,9 @@
 	img {
 		width: 100%;
 	}
+	@media(max-width: 640px) {
+		max-width: 350px;
+	}
 }
 
 .title {
