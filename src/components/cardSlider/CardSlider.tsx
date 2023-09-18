@@ -32,7 +32,7 @@ export const CardSlider = ({ imgs }: any): JSX.Element => {
 				className={cs('mySwiper2')}
 			>
 				{
-					imgs.map((item: string) => (
+					imgs?.map((item: string) => (
 						<SwiperSlide key={item}>
 							<img alt='' src={`${item}`} />
 						</SwiperSlide>
@@ -51,7 +51,7 @@ export const CardSlider = ({ imgs }: any): JSX.Element => {
 				direction={'vertical'}
 			>
 				{
-					imgs.map((item: string) => (
+					imgs?.map((item: string) => (
 						<SwiperSlide key={item}>
 							<img alt='' src={`${item}`} />
 						</SwiperSlide>

@@ -1,0 +1,21 @@
+.item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 0;
+    border-bottom: 1px solid var(--light-grey);
+    justify-content: space-between;
+}
+
+.inner {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.link {
+    color: var(--blue);
+    &:hover {
+        color: var(--grey)
+    }
+}

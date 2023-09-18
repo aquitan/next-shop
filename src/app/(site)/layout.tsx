@@ -8,6 +8,7 @@ import { ThemeProvider } from '../../../context/ThemeContext'
 import { Suspense } from 'react'
 import LoadingMain from './loading'
 import { Sidebar } from '@/components'
+import ym from 'react-yandex-metrika'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="icon" href="./favicon.ico" sizes='any' />
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider>
           <main className={styles.content}>
