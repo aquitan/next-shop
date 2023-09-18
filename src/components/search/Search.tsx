@@ -1,6 +1,6 @@
 'use client'
 
-import { MouseEvent, useMemo, useState } from "react"
+import { MouseEvent, useEffect, useMemo, useState } from "react"
 import styles from './Search.module.scss'
 import classNames from "classnames/bind"
 import { productTest } from "../../../mockData/productsData"
@@ -9,22 +9,31 @@ import { SearchItem } from "../searchItem/SearchItem"
 
 type SearchProps = {
 	active: boolean,
-	setActive: (state:any) => any,
-	query: string,
-	setQuery: (value:string) => void,
-	filteredItems: any[]
+	setActive?: (state:any) => any
 }
 
-export const Search = ({ active, setActive, setQuery, query, filteredItems }: SearchProps) => {
+export const Search = ({ active, setActive }: SearchProps) => {
 	const cx = classNames.bind(styles)
 
+	const [query, setQuery] = useState('')
 
+
+	const filteredItems = useMemo(() => {
+		return productTest.filter(item => (
+			item.title.toLowerCase().includes(query.toLowerCase())
+		))
+	}, [query])
+
+	useEffect(() => {
+		setQuery('')
+	}, [active])
 
 
 	const onSearchClick = (e:MouseEvent<HTMLDivElement>) => {
 		e.stopPropagation()
-		setActive((state:any) => !state)
-		setQuery('')
+		if (setActive) {
+			setActive((state:any) => !state)
+		}	
 	}
 
 	return (

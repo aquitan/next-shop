@@ -19,14 +19,6 @@ const navLinks = [
 
 const Header = () => {
     const [active, setActive] = useState(false)
-    const [query, setQuery] = useState('')
-
-
-	const filteredItems = useMemo(() => {
-		return productTest.filter(item => (
-			item.title.toLowerCase().includes(query.toLowerCase())
-		))
-	}, [query])
     
 
     return (
@@ -38,7 +30,7 @@ const Header = () => {
                     <HeaderControls setActive={setActive} active={active} />
                 </div>
             </header>
-            <Search setActive={setActive} setQuery={setQuery} query={query} active={active} filteredItems={filteredItems} />
+            <Search setActive={setActive} active={active} />
         </>
     )
 }
