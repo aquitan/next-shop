@@ -1,36 +1,38 @@
+'use client'
+
 import Image from "next/image"
 import { HTag, PTag } from "../../components"
 import { PostDetailedProps } from "./PostDetailed.props"
-import styles from './PostDetailed.module.css'
+import styles from './PostDetailed.module.scss'
+import Slider from "../slider/Slider"
 
-export const PostDetailed = ({ post }: PostDetailedProps) => {
+
+const PostDetailed = ({ post }: any) => {
 	return (
 		<div className={styles.wrap}>
-			<HTag tag='h1' size='xl' align="center" weight='light'>Fast Fashion, And Faster Fashion</HTag>
+			<HTag tag='h1' size='xl' align="center" weight='light'>{post.title}</HTag>
 			<div className={styles.info}>
 				<div>{post?.author} / {post?.date}</div>
 			</div>
-			<Image className={styles.imgMain} src={'/post-img.png'} width={800} height={500} alt='' />
-			<div className={styles.content}>
-				{
-					post.description.map((p: string) => (
-						<PTag>
-							{p}
-						</PTag>
-					))
-				}
-				<Image className={styles.textImg} src={post.imgList[0]} width={500} height={300} alt='' />
-				{
-					post.description.map((p: string) => (
-						<PTag>
-							{p}
-						</PTag>
-					))
-				}
+			<Image className={styles.imgMain} src={post.img} width={800} height={500} alt='' />
 
-				<Image className={styles.textImg} src={post.imgList[0]} width={500} height={300} alt='' />
+			{
+				post.text.slice(0, 2).map((p:string) => (
+					<PTag key={p}>{p}</PTag>
+				))
+			}
 
+			<div className={styles.slider}>
+				<Slider imgs={post.sliderOne} />
 			</div>
+
+			{
+				post.text.slice(2).map((p:string) => (
+					<PTag key={p}>{p}</PTag>
+				))
+			}
 		</div>
 	)
 }
+
+export default PostDetailed;

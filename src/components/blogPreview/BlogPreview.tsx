@@ -17,7 +17,13 @@ export const BlogPreview = ({ description, author, date, category, title, img, i
 				<div className={styles.item}><CategoryIcon /> {category}</div>
 			</div>
 			<HTag tag='h2' >{title}</HTag>
-			<div className={styles.description}>{description}</div>
+			<div className={styles.description}>
+				{
+					description.slice(0, 2).map(item => (
+						<p>{item}</p>
+					))
+				}
+			</div>
 			<Link className={styles.read} href={`/blog/${id}`}>Читать</Link>
 		</div>
 	)
