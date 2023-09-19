@@ -22,9 +22,13 @@ const PostDetailed = ({ post }: any) => {
 				))
 			}
 
-			<div className={styles.slider}>
-				<Slider imgs={post.sliderOne} />
-			</div>
+			{
+				post.sliderOne ? (
+					<div className={styles.slider}>
+						<Slider imgs={post.sliderOne} />
+					</div>
+				) : null
+			}
 
 			{
 				post.text.slice(2).map((p:string) => (

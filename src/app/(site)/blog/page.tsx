@@ -45,11 +45,11 @@ const Blog = () => {
 						<BlogCategories />
 						<div>
 							<HTag tag='h2' size="m" weight="light">Недавние посты</HTag>
-							{/* {
-								posts.map(post => (
-									<RecentPost title={post.title} img={post.img} date={post.date} />
+							{
+								articlesData.map(post => (
+									<RecentPost key={post.id} id={post.id} title={post.title} img={post.img} date={post.date} />
 								))
-							} */}
+							}
 						</div>
 					</div>
 				</div>

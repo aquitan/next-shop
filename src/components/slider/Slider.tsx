@@ -27,7 +27,7 @@ const Slider = ({imgs}:SliderProps) => {
             >
             {
                 imgs.map((item:string) => (
-                    <SwiperSlide key={item}>
+                    <SwiperSlide className={styles.sliderItem} key={item}>
                         <Image className={styles.img} src={item} width={550} height={350} alt=''/>
                     </SwiperSlide>
                 ))

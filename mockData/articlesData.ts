@@ -12,6 +12,7 @@ export const articlesData = [
         sliderTwo: [],
         author: 'admin',
         date: '19.09.2023',
-        category: 'События'
+        category: 'События',
+        
     }
 ]
