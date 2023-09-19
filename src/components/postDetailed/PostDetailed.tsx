@@ -5,6 +5,7 @@ import { HTag, PTag } from "../../components"
 import { PostDetailedProps } from "./PostDetailed.props"
 import styles from './PostDetailed.module.scss'
 import Slider from "../slider/Slider"
+import Link from "next/link"
 
 
 const PostDetailed = ({ post }: any) => {
@@ -14,7 +15,7 @@ const PostDetailed = ({ post }: any) => {
 			<div className={styles.info}>
 				<div>{post?.author} / {post?.date}</div>
 			</div>
-			<Image className={styles.imgMain} src={post.img} width={800} height={500} alt='' />
+			<Image className={styles.imgMain} src={post.imgMain} width={800} height={500} alt={post.title} />
 
 			{
 				post.text.slice(0, 2).map((p:string) => (
@@ -23,7 +24,7 @@ const PostDetailed = ({ post }: any) => {
 			}
 
 			{
-				post.sliderOne ? (
+				post.sliderOne.length ? (
 					<div className={styles.slider}>
 						<Slider imgs={post.sliderOne} />
 					</div>
@@ -35,6 +36,12 @@ const PostDetailed = ({ post }: any) => {
 					<PTag key={p}>{p}</PTag>
 				))
 			}
+
+			<Link className={styles.postLink} href={post.linkVk[0].link}>
+				{post.linkVk[0].title}
+				<Image src={post.linkVk[0].icon} width={20} height={20} alt={post.linkVk[0].title} />
+			</Link>
+			
 		</div>
 	)
 }

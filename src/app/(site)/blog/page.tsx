@@ -3,28 +3,9 @@ import { BlogPreview } from "@/components/blogPreview/BlogPreview";
 import Section from "@/components/section/Section";
 import styles from './page.module.css'
 import { articlesData } from '../../../../mockData/articlesData'
+import { reverse } from "dns";
 
 
-const posts = [
-	{
-		id: '1',
-		title: 'Победитель этапа DRIFT BATTLE SERIES - инженер «Эластомерик Системс» Руслан Гезалов',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.',
-		author: 'Admin',
-		date: '30.08.2023',
-		category: 'Масло',
-		img: '/blog-post-preview.png',
-	},
-	{
-		id: '2',
-		title: 'Going all-in with millennial design',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.',
-		author: 'Admin',
-		date: '30.08.2023',
-		category: 'Масло',
-		img: '/blog-post-preview.png',
-	}
-]
 
 const Blog = () => {
 	return (
@@ -36,8 +17,8 @@ const Blog = () => {
 				<div className={styles.cols}>
 					<div>
 						{
-							articlesData?.map((post) => (
-								<BlogPreview key={post.id} id={post.id} title={post.title} description={post.text} author={post.author} date={post.date} category={post.category} img={post.img} />
+							articlesData.reverse().map((post) => (
+								<BlogPreview key={post.id} id={post.id} title={post.title} description={post.text} author={post.author} date={post.date} category={post.category} img={post.imgMain} />
 							))
 						}
 					</div>
@@ -46,8 +27,8 @@ const Blog = () => {
 						<div>
 							<HTag tag='h2' size="m" weight="light">Недавние посты</HTag>
 							{
-								articlesData.map(post => (
-									<RecentPost key={post.id} id={post.id} title={post.title} img={post.img} date={post.date} />
+								articlesData.reverse().map(post => (
+									<RecentPost key={post.id} id={post.id} title={post.title} img={post.imgMain} date={post.date} />
 								))
 							}
 						</div>

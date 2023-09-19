@@ -8,11 +8,49 @@ export const articlesData = [
         sliderOne: [
             '/articleImg/DSC_0908.jpg', '/articleImg/_GTpmbiRhA4.jpg', '/articleImg/0J0Mwwy3dW8.jpg', '/articleImg/0pwmWJC-uts.jpg', '/articleImg/2a7fCJUsOhw.jpg', '/articleImg/3nmj6HLOGPA.jpg', '/articleImg/4NMiBTuJz9o.jpg', '/articleImg/6CLF5TzfuWc.jpg'
         ],
-        img: '/articleImg/DSC_0908.jpg',
+        imgMain: '/articleImg/DSC_0908.jpg',
+        sliderTwo: [],
+        author: 'admin',
+        date: '18.09.2023',
+        category: 'События',
+        linkVk: [
+            {
+                title: 'Присоединяйтесь к Cargosil в нашей группе ВК',
+                link: 'https://vk.com/cargosil48',
+                icon: '/vk.svg'
+            },
+        ],
+        productLink: {
+            title: '',
+            link: '',
+            img: '',
+            description: ''
+        }
+    },
+    {
+        id: '2',
+        title: 'Скорость и дым: второй этап Drift Battle Series в Липецке состоится 27 Августа!',
+        text: [
+            '27 августа в 13:00 на территории особой экономической зоны “Липецк” развернется второй этап захватывающего Чемпионата по дрифту Drift Battle Series!', 'Два дня, полные дрифтовых трюков, скорости и эмоций, ожидают поклонников дрифта и гонок. Тренировочные заезды и квалификация начнутся 26 августа. Участники соревнований проверят дрифт-трек, подготовят автомобили и будут соревноваться за право пройти в следующий этап.', 'В DBS участвует инженер компании “Эластомерик Системс” - Руслан Гезалов. Он не раз побеждал в этих соревнованиях, и в этот раз надеется на высокий результат.', 'Компания “Эластомерик Системс” – официальный спонсор соревнований – желает всем участникам удачи, а зрителям – отличного настроения и ярких эмоций.', 'Напоминаем, что мы выпускаем продукцию, которая подходит для обслуживания любых транспортных средств, в том числе гоночных автомобилей. Под брендом CARGOSIL представлены ремкомплекты, антикоррозийные покрытия, синтетические масла, восстановители пластика и другие продукты.'
+        ], 
+        sliderOne: [],
+        imgMain: '/articleImg/banner_dbs_vtoroy_etap_lipetsk_.jpg',
         sliderTwo: [],
         author: 'admin',
         date: '19.09.2023',
         category: 'События',
-        
+        linkVk: [
+            {
+                title: 'Давайте вместе следить за вторым этапом Drift Battle SeriesCargosil в VK и выбирать отечественную продукцию для обслуживания автомобилей!',
+                link: 'https://vk.com/dbstut',
+                icon: '/vk.svg'
+            },
+        ],
+        productLink: {
+            title: '',
+            link: '',
+            img: '',
+            description: ''
+        }
     }
 ]
