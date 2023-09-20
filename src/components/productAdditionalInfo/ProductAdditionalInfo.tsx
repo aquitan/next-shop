@@ -16,7 +16,7 @@ export const ProductAdditionalInfo = ({ categoryName }: ProductAdditionalInfoPro
 				<span>{categoryName ? categoryName : '...'}</span>
 			</div>
 			<div className={styles.row}>
-				<span className={styles.name}>Поделиться</span>
+				<span className={styles.name}>Соцсети</span>
 				<span>:</span>
 				<span className={styles.socials}>
 					<Link target='_blank' href='https://vk.com/cargosil48'>
