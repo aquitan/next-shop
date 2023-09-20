@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 import styles from './Navigation.module.css'
+import Submenu from "../submenu/Submenu"
+import { useState } from "react"
 
 type Props = {
     navLinks: NavLink[]
@@ -10,11 +12,28 @@ type Props = {
 
 type NavLink = {
     label: string,
-    href: string
+    href: string,
+    submenu?: SubmenuType[]
 }
 
-const Navigation = ({ navLinks }: Props) => {
+type SubmenuType = {
+    label: string,
+    value: string
+}
+
+const Navigation = ({ navLinks }: any) => {
     const pathname = usePathname()
+    const [active, setActive] = useState<true | false>(false)
+
+    const onShow = (submenu: any) => {
+        if (submenu) {
+            setActive(true)
+        }
+    }
+
+    const onHide = () => {
+        setActive(false)
+    }
 
     return (
         <nav className={styles.nav}>
@@ -22,7 +41,14 @@ const Navigation = ({ navLinks }: Props) => {
             {navLinks.map((link: NavLink) => {
                 const isActive = pathname === link.href ? styles.active : ''
 
-                return <Link className={`${styles.link} ${isActive}`} key={link.label} href={link.href}>{link.label}</Link>
+                return <div onMouseLeave={onHide} onMouseEnter={() => onShow(link.submenu)} className={styles.navItem} key={link.label}>
+                    <Link className={`${styles.link} ${isActive}`} href={link.href}>
+                        {link.label}
+                    </Link>
+                    {
+                        link?.submenu ? <Submenu active={active} submenu={link?.submenu} /> : null
+                    }
+                </div>
             })}
         </nav>
     )

@@ -5,6 +5,7 @@ import CatalogItem from "../catalogItem/CatalogItem";
 import { useState } from 'react';
 import Button from '../button/Button';
 import classNames from 'classnames/bind';
+import { HTag } from '..';
 
 type Props = {
 	products: any,
@@ -29,7 +30,7 @@ const HomeProducts = ({ products, title, horizontal }: Props) => {
 
 	return (
 		<>
-			{title && <h2 className={styles.title}>{title}</h2>}
+			{title && <HTag tag='h2' size='xl' weight='light'>{title}</HTag>}
 			<div className={cx(styles.wrap, { [styles.horizontal]: horizontal })}>
 				{
 					products.slice(0, itemsToShow).map((item: any) => (

@@ -4,10 +4,12 @@
 	align-items: center;
 	border-radius: var(--radius-5);
 	transition: all .2s ease-in-out;
-	box-shadow: 0 0 10px 1px var(--shadow);
+	// box-shadow: 0 0 10px 1px var(--shadow);
+		background-color: var(--light-grey);
+		padding: 10px;
 
 	&:hover {
-		box-shadow: 0 0 10px 1px var(--shadow-hover);
+		box-shadow: 0 0 5px 1px var(--shadow);
 		transition: all .2s ease-in-out;
 		border-color: transparent;
 		.title {
@@ -17,6 +19,12 @@
 	}
 }
 
+.titleWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
 .img {
 	max-height: 200px;
 	height: 100%;
@@ -24,8 +32,13 @@
 	text-align: center;
 }
 .title {
-	font-weight: bold;
+	font-weight: normal;
 	color: var(--text);
 	text-decoration: none;
 	padding: 10px 0;
+	align-self: flex-start;
+	}
+	
+	.amount {
+		color: var(--grey);
 }

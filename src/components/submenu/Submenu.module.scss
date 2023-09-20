@@ -1,0 +1,22 @@
+.submenu {
+	background-color: var(--white);
+	padding: 10px;
+	position: absolute;
+	box-shadow: 0 0 5px 1px var(--shadow);
+	display: flex;
+	flex-direction: column;
+	display: none;
+}
+
+.active {
+	display: flex;
+}
+
+.item {
+	padding-bottom: 5px;
+	border-bottom: 1px solid var(--light-grey);
+
+	&:hover {
+		color: var(--blue);
+	}
+}

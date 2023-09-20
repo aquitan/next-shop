@@ -1,6 +1,6 @@
 import '../globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import styles from './page.module.css'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
@@ -10,7 +10,7 @@ import LoadingMain from './loading'
 import { Sidebar } from '@/components'
 import ym from 'react-yandex-metrika'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin', 'cyrillic'] })
 
 export const metadata: Metadata = {
   title: 'Cargosil - автохимия',
@@ -28,7 +28,7 @@ export default function RootLayout({
         <link rel="icon" href="./favicon.ico" sizes='any' />
         <link rel="preconnect" href="https://mc.yandex.ru" />
       </head>
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <ThemeProvider>
           <main className={styles.content}>
             <Header />
