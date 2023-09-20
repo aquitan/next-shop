@@ -20,10 +20,11 @@ type Props = {
 	id: string,
 	category: string,
 	horizontal?: boolean,
-	favourite?: boolean
+	favourite?: boolean,
+	link: string
 }
 
-const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, currency, category, horizontal, favourite }: Props) => {
+const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, currency, category, horizontal, favourite, link }: Props) => {
 	const [isHover, setIsHover] = useState<boolean>(false)
 	const removeFav = useFavourites((state) => state.removeFav)
 
@@ -47,7 +48,7 @@ const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, curren
 		<div className={cx(styles.card, { [styles.horizontal]: horizontal })} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
 
 			<div className={styles.image}>
-				<CatalogItemShares id={id} isHover={isHover} />
+				<CatalogItemShares link={link} id={id} isHover={isHover} />
 				<Image className={styles.img} src={src} alt={alt} width={200} height={300} />
 			</div>
 			<div className={styles.info}>

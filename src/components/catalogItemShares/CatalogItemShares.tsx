@@ -11,10 +11,11 @@ import { productTest } from '../../../mockData/productsData'
 
 type Props = {
 	isHover: boolean,
-	id: string
+	id: string,
+	link: string
 }
 
-const CatalogItemShares = ({ isHover, id }: Props): JSX.Element => {
+const CatalogItemShares = ({ isHover, id, link }: Props): JSX.Element => {
 	const addProduct = useCompare((state) => state.addProduct)
 	const addFav = useFavourites((state) => state.addFav)
 
@@ -30,7 +31,7 @@ const CatalogItemShares = ({ isHover, id }: Props): JSX.Element => {
 	return (
 		<div className={`${styles.shares} ${isHover ? styles.hover : ''}`}>
 			<div className={styles.shares__inner}>
-				<Button color={'cart'} link='https://www.ozon.ru/category/avtotovary-8500/elastomeric-systems-100139746/?category_was_predicted=true&deny_category_prediction=true&from_global=true&seller=448018&text=cargosil'>Купить</Button>
+				<Button color={'cart'} link={link}>Купить</Button>
 				<div className={styles.shares__actions}>
 					<div onClick={addToFavourites} className={styles.shares__actions__item}>
 						<Like />
