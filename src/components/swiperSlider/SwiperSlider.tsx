@@ -1,7 +1,7 @@
 'use client'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -24,7 +24,12 @@ const SwiperSlider = () => {
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false
+      }}
+      loop={true}
+      modules={[Pagination, Autoplay]}
     >
       {
         items.map((item: any) => (

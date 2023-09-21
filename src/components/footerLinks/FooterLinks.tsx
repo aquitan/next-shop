@@ -12,13 +12,13 @@ type LinkItem = {
 
 const FooterLinks = ({ links }: Props) => {
     return (
-        <>
+        <div className={styles.links}>
             {
                 links.map((link: LinkItem) => (
-                    <Link className={styles.links} key={link.label} href={link.href}>{link.label}</Link>
+                    <Link className={styles.link} key={link.label} href={link.href}>{link.label}</Link>
                 ))
             }
-        </>
+        </div>
     )
 }
 

@@ -39,7 +39,7 @@ const Category = async ({ params: { category } }: Props) => {
 				<div className={styles.wrap}>
 					{
 						products?.map((item: any) => (
-							<CatalogItem category={item.category} id={item.id} key={item.id} alt={item.title} src={item.imgs[0]} title={item.previewTitle} price={item.variant[0].price} oldPrice={item.oldPrice} description={item.description} currency={'₽'} />
+							<CatalogItem category={item.category} id={item.id} key={item.id} alt={item.title} src={item.imgs[0]} title={item.previewTitle} price={item.variant[0].price} description={item.description} currency={'₽'} />
 						))
 					}
 				</div>

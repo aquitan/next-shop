@@ -12,10 +12,10 @@ import { productTest } from '../../../mockData/productsData'
 type Props = {
 	isHover: boolean,
 	id: string,
-	link: string
+	link?: string
 }
 
-const CatalogItemShares = ({ isHover, id, link }: Props): JSX.Element => {
+const CatalogItemShares = ({ isHover, id }: Props): JSX.Element => {
 	const addProduct = useCompare((state) => state.addProduct)
 	const addFav = useFavourites((state) => state.addFav)
 
@@ -31,7 +31,7 @@ const CatalogItemShares = ({ isHover, id, link }: Props): JSX.Element => {
 	return (
 		<div className={`${styles.shares} ${isHover ? styles.hover : ''}`}>
 			<div className={styles.shares__inner}>
-				<Button color={'cart'} link={link}>Купить</Button>
+				<Button color={'cart'}>Купить</Button>
 				<div className={styles.shares__actions}>
 					<div onClick={addToFavourites} className={styles.shares__actions__item}>
 						<Like />

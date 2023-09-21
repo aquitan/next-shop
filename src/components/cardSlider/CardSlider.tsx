@@ -33,7 +33,7 @@ export const CardSlider = ({ imgs }: any): JSX.Element => {
 			>
 				{
 					imgs?.map((item: string) => (
-						<SwiperSlide key={item}>
+						<SwiperSlide className={styles.slideMain} key={item}>
 							<img alt='' src={`${item}`} />
 						</SwiperSlide>
 					))
@@ -52,7 +52,7 @@ export const CardSlider = ({ imgs }: any): JSX.Element => {
 			>
 				{
 					imgs?.map((item: string) => (
-						<SwiperSlide key={item}>
+						<SwiperSlide className={styles.slideThumb} key={item}>
 							<img alt='' src={`${item}`} />
 						</SwiperSlide>
 					))
