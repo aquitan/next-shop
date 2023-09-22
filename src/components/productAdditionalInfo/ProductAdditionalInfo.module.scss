@@ -9,19 +9,16 @@
 
 .row {
 	display: flex;
-	max-width: 250px;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-bottom: 20px;
 	align-items: center;
+	gap: 20px;
 
 	svg {
-		height: 30px;
+		height: 20px;
 	}
 }
 
-.name {
-	width: 100px;
-}
 
 .socials {
 	display: flex;

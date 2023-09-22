@@ -8,14 +8,16 @@ import Like from './icons/like.svg'
 import { useCompare, useFavourites } from '../../../store'
 import { shallow } from 'zustand/shallow'
 import { productTest } from '../../../mockData/productsData'
+import Link from 'next/link'
+import { Url } from 'next/dist/shared/lib/router/router'
 
 type Props = {
 	isHover: boolean,
 	id: string,
-	link?: string
+	link: Url
 }
 
-const CatalogItemShares = ({ isHover, id }: Props): JSX.Element => {
+const CatalogItemShares = ({ isHover, id, link }: Props): JSX.Element => {
 	const addProduct = useCompare((state) => state.addProduct)
 	const addFav = useFavourites((state) => state.addFav)
 
@@ -31,7 +33,7 @@ const CatalogItemShares = ({ isHover, id }: Props): JSX.Element => {
 	return (
 		<div className={`${styles.shares} ${isHover ? styles.hover : ''}`}>
 			<div className={styles.shares__inner}>
-				<Button color={'cart'}>Купить</Button>
+				<Link target='_blank' className={styles.link} href={link}>Купить</Link>
 				<div className={styles.shares__actions}>
 					<div onClick={addToFavourites} className={styles.shares__actions__item}>
 						<Like />

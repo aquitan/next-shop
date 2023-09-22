@@ -14,7 +14,7 @@ export const FavouritesWrap = () => {
             {
                 favourites.length !== 0 ?
                     favourites.map(item => (
-                        <CatalogItem favourite={true} horizontal={true} category={item.category} id={item.id} key={item.id} alt={item.title} src={item.imgs[0]} title={item.previewTitle} price={item.variant[0].price} oldPrice={item.oldPrice} description={item.description} currency={'₽'} />
+                        <CatalogItem link={item.link} favourite={true} horizontal={true} category={item.category} id={item.id} key={item.id} alt={item.title} src={item.imgs[0]} title={item.previewTitle} price={item.variant[0].price} oldPrice={item.oldPrice} description={item.description} currency={'₽'} />
                     ))
                 : <PageEmpty page='избранного' />
             }

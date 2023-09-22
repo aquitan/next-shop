@@ -1,13 +1,26 @@
+'use client'
+
 import Link from 'next/link'
 import styles from './ProductAdditionalInfo.module.scss'
 import Vk from './vk.svg'
 import Yt from './yt.svg'
+import Fav from './fav.svg'
+import { useCompare } from '../../../store'
+import { productTest } from '../../../mockData/productsData'
 
 type ProductAdditionalInfoProps = {
-	categoryName: string | undefined
+	categoryName: string | undefined,
+	id: string | undefined
 }
 
-export const ProductAdditionalInfo = ({ categoryName }: ProductAdditionalInfoProps) => {
+export const ProductAdditionalInfo = ({ categoryName, id }: ProductAdditionalInfoProps) => {
+	const addProduct = useCompare((state) => state.addProduct)
+
+	const addCompare = () => {
+		addProduct(id, productTest)
+	}
+
+
 	return (
 		<div className={styles.info}>
 			<div className={styles.row}>
@@ -16,8 +29,10 @@ export const ProductAdditionalInfo = ({ categoryName }: ProductAdditionalInfoPro
 				<span>{categoryName ? categoryName : '...'}</span>
 			</div>
 			<div className={styles.row}>
-				<span className={styles.name}>Соцсети</span>
-				<span>:</span>
+				<span onClick={addCompare} className={styles.name}>
+					<Fav />
+				</span>
+				<span>|</span>
 				<span className={styles.socials}>
 					<Link target='_blank' href='https://vk.com/cargosil48'>
 						<Vk />

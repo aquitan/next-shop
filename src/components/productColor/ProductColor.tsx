@@ -7,7 +7,7 @@ export const ProductColor = ({ colors }: ProductColorProps) => {
 
 	return (
 		<div className={styles.wrap}>
-			<div className={styles.title}>Цвет:</div>
+			<div className={styles.title}>Доступный цвет:</div>
 			<div className={styles.colors}>
 				{
 					colors.map((item: Color) => (

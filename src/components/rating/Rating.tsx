@@ -12,7 +12,7 @@ export const Rating = (): JSX.Element => {
 				<Star />
 			</div>
 			<div className={styles.votes}>
-				0 голосов
+				0 оценок
 			</div>
 		</div>
 	)
