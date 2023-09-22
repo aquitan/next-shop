@@ -13,7 +13,7 @@ import { Url } from "next/dist/shared/lib/router/router";
 type Props = {
 	src: string,
 	title: string,
-	description: string,
+	description?: string,
 	price: string,
 	oldPrice?: string,
 	alt: string,
@@ -56,7 +56,10 @@ const CatalogItem = ({ src, title, description, price, oldPrice, alt, id, curren
 				<div className={styles.title}>
 					<Link href={`/catalog/${category}/${id}`}>{title}</Link>
 				</div>
-				{/* <div className={styles.description}>{description}</div> */}
+				{
+					description ? <div className={styles.description}>{description}</div> : null
+				}
+
 				<div className={styles.price}>
 					<span>Цена:</span>
 					<div>

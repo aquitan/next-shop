@@ -9,7 +9,7 @@ type UseCompareType = {
 type UseFavouritesType = {
 	favourites: any[],
 	loading: boolean,
-	addFav: (id: string, items: any[]) => void,
+	addFav: (id: string | undefined, items: any[]) => void,
 	removeFav: (id: string) => any
 }
 

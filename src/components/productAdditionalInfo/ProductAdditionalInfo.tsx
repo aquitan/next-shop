@@ -5,7 +5,7 @@ import styles from './ProductAdditionalInfo.module.scss'
 import Vk from './vk.svg'
 import Yt from './yt.svg'
 import Fav from './fav.svg'
-import { useCompare } from '../../../store'
+import { useCompare, useFavourites } from '../../../store'
 import { productTest } from '../../../mockData/productsData'
 
 type ProductAdditionalInfoProps = {
@@ -14,10 +14,10 @@ type ProductAdditionalInfoProps = {
 }
 
 export const ProductAdditionalInfo = ({ categoryName, id }: ProductAdditionalInfoProps) => {
-	const addProduct = useCompare((state) => state.addProduct)
+	const addFavv = useFavourites((state) => state.addFav)
 
 	const addCompare = () => {
-		addProduct(id, productTest)
+		addFavv(id, productTest)
 	}
 
 

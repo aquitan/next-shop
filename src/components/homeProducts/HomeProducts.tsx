@@ -34,7 +34,7 @@ const HomeProducts = ({ products, title, horizontal }: Props) => {
 			<div className={cx(styles.wrap, { [styles.horizontal]: horizontal })}>
 				{
 					products.slice(0, itemsToShow).map((item: any) => (
-						<CatalogItem link={item.link} horizontal={horizontal} category={item.category} id={item.id} key={item.id} alt={item.title} src={item.imgs[0]} title={item.previewTitle} price={item.variant[0].price} description={item.description} currency={'₽'} />
+						<CatalogItem link={item.link} horizontal={horizontal} category={item.category} id={item.id} key={item.id} alt={item.title} src={item.imgs[0]} title={item.previewTitle} price={item.variant[0].price} currency={'₽'} />
 					))
 				}
 			</div>
