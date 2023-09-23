@@ -15,7 +15,7 @@ const Submenu = ({ submenu, active }: any) => {
 		<div className={cx(styles.submenu, { [styles.active]: active })}>
 			{
 				submenu.map((item: SubmenuProps) => (
-					<Link className={styles.item} href={`/catalog/${item.value}`}>{item.label}</Link>
+					<Link key={item.value} className={styles.item} href={`/catalog/${item.value}`}>{item.label}</Link>
 				))
 			}
 		</div>

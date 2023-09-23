@@ -1,8 +1,8 @@
 'use client'
 
-import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
-import { Icon } from "../icon/Icon";
-import styles from './HeaderControls.module.css'
+import DarkModeToggle from "@/components/darkModeToggle/DarkModeToggle";
+import { Icon } from "@/components/icon/Icon";
+import styles from './HeaderControls.module.scss'
 import SearchIcon from './search-icon.svg'
 import FavouritesIcon from './favourite-icon.svg'
 import CompareIcon from './compare-icon.svg'

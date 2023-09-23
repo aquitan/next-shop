@@ -5,6 +5,7 @@ import { Input } from "@/components/input/Input";
 import Section from "@/components/section/Section";
 import { TextArea } from "@/components/textarea/TextArea";
 import styles from './page.module.css'
+import YMap from "@/components/yMap/YMap";
 
 const Contacts = () => {
     return (
@@ -49,6 +50,7 @@ const Contacts = () => {
                     </div>
 
                 </div>
+                <YMap />
             </Section>
         </>
 

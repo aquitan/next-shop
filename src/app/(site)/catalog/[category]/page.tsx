@@ -13,10 +13,21 @@ type Props = {
 }
 
 export const generateMetadata = async ({ params: { category } }: Props): Promise<Metadata> => {
+	const el = await getProduct(category)
+	if (el) {
+		const categorieName = el[0].categoryRu
+
+		return {
+			title: `Cargosil | ${categorieName}`,
+			description: `Продукция Cargosil ${categorieName}`
+		}
+	}
+
 	return {
 		title: `Cargosil | ${category}`,
 		description: `Продукция Cargosil ${category}`
 	}
+
 }
 
 const getProduct = async (category: string) => {
@@ -34,7 +45,7 @@ const Category = async ({ params: { category } }: Props) => {
 
 	return (
 		<>
-			<PageBanner title='Категория' />
+			<PageBanner title={products ? products[0].categoryRu : 'Категория'} />
 			<Section>
 				<div className={styles.wrap}>
 					{
