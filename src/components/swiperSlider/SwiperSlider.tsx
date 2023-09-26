@@ -10,6 +10,7 @@ import styles from './SiperSlider.module.scss'
 
 
 const items = [
+  { src: '/banner-1.jpeg', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.', title: 'Cargosil', link: '/catalog' },
   { src: '/kargosil_vysokostojkie_cherniteli_dlya_shin.jpg', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.', title: 'Cargosil', link: '/catalog' },
   { src: '/gidroizolyaciya_torgovogo_kioska_cargosil.jpg', text: 'Лучшая автохимия на рынке 3', title: 'Cargosil 3', link: '/catalog' },
 ]
