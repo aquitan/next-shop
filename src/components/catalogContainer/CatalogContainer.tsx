@@ -25,8 +25,8 @@ export const CatalogContainer = ({ products }: any) => {
 		{ label: 'Антикоры', value: 'antikory' },
 		{ label: 'Смазки', value: 'smazki' },
 		{ label: 'Масла', value: 'masla' },
-		{ label: 'Силиконы', value: 'silikoni' },
-		{ label: 'Чернители', value: 'chernitely' },
+		{ label: 'Силиконы', value: 'silikony' },
+		{ label: 'Чернители', value: 'cherniteli' },
 	]
 
 	const changeCategory = () => {
