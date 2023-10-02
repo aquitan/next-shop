@@ -21,6 +21,7 @@
 	bottom: 5%;
 	left: 5%;
 	box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+	border-radius: 10px;
 	@media(max-width: 860px) {
 		position: relative;
 		bottom: 0;
@@ -34,10 +35,10 @@
 
 .title {
 	color: #B88E2F;
-	font-size: 52px;
+	font-size: 32px;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 65px;
+	line-height: 40px;
 }
 
 .container {
