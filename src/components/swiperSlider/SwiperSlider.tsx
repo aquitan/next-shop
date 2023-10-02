@@ -10,9 +10,11 @@ import styles from './SiperSlider.module.scss'
 
 
 const items = [
-  { src: '/banner-1.jpeg', text: 'Продлить срок службы резиновых элементов автомобиля', title: 'Силиконовая смазка Cargosil', link: '/catalog' },
-  // { src: '/kargosil_vysokostojkie_cherniteli_dlya_shin.jpg', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.', title: 'Cargosil', link: '/catalog' },
-  // { src: '/gidroizolyaciya_torgovogo_kioska_cargosil.jpg', text: 'Лучшая автохимия на рынке 3', title: 'Cargosil 3', link: '/catalog' },
+  { src: '/main-slider/banner-1.jpeg', text: 'Продлить срок службы резиновых элементов автомобиля', title: 'Силиконовая смазка Cargosil', link: '/catalog/silikony' },
+  { src: '/main-slider/chernitely.jpeg', text: 'Восстановить внешний вид шин', title: 'Чернители для шин Cargosil', link: '/catalog/cherniteli' },
+  { src: '/main-slider/masla.jpeg', text: 'Высокоэффективные синтетические масла', title: 'Синтетические масла Cargosil', link: '/catalog/masla' },
+  { src: '/main-slider/mastika.jpeg', text: 'Гидротзоляция грузовых фургонов', title: 'Гибридные мастики-герметики Cargosil', link: '/catalog/mastiki' },
+  { src: '/main-slider/plastik.jpeg', text: 'Восстановления пластика', title: 'Зашитное прозрачное покрытие на основе каучука', link: '/catalog/cherniteli' },
 ]
 
 
